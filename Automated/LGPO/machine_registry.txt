@@ -3,46 +3,6 @@
 ; Source file:  machine_registry.pol
 
 Computer
-Software\Policies\Microsoft\Windows\WindowsUpdate
-SetDisablePauseUXAccess
-DWORD:0
-
-Computer
-Software\Policies\Microsoft\Windows\WindowsUpdate
-DeferQualityUpdates
-DWORD:1
-
-Computer
-Software\Policies\Microsoft\Windows\WindowsUpdate
-DeferQualityUpdatesPeriodInDays
-DWORD:30
-
-Computer
-Software\Policies\Microsoft\Windows\WindowsUpdate
-DeferFeatureUpdates
-DWORD:1
-
-Computer
-Software\Policies\Microsoft\Windows\WindowsUpdate
-DeferFeatureUpdatesPeriodInDays
-DWORD:30
-
-Computer
-Software\Policies\Microsoft\Windows\WindowsUpdate
-ManagePreviewBuildsPolicyValue
-DWORD:1
-
-Computer
-Software\Policies\Microsoft\Windows\WindowsUpdate
-AUPowerManagement
-DWORD:0
-
-Computer
-Software\Policies\Microsoft\Windows\WindowsUpdate\AU
-AlwaysAutoRebootAtScheduledTime
-DWORD:0
-
-Computer
 SOFTWARE\Classes\batfile\shell\runasuser
 SuppressionPolicy
 DWORD:4096
@@ -1033,58 +993,8 @@ DisableATMFD
 DWORD:1
 
 Computer
-OFTWARE\Microsoft\Windows NT\CurrentVersion\Windows
-BlockFileElevation
-DWORD:1
-
-Computer
-SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Associations
-BlockFileElevation
-DWORD:1
-
-Computer
-SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Associations
-BlockProtocolElevation
-DWORD:1
-
-Computer
 SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\CredUI
 EnumerateAdministrators
-DWORD:0
-
-Computer
-SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Policies\DataCollection
-AllowTelemetry
-DWORD:0
-
-Computer
-SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection
-AllowTelemetry
-DWORD:0
-
-Computer
-SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection
-MicrosoftEdgeDataOptIn
-DWORD:0
-
-Computer
-SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection
-MaxTelemetryAllowed
-DWORD:0
-
-Computer
-SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection
-DoNotShowFeedbackNotifications
-DWORD:1
-
-Computer
-SOFTWARE\Microsoft\PolicyManager\default\Settings\AllowOnlineTips
-value
-DWORD:0
-
-Computer
-SOFTWARE\Microsoft\PolicyManager\default\System\AllowExperimentation
-value
 DWORD:0
 
 Computer
@@ -1888,16 +1798,6 @@ AllowSpeechModelUpdate
 DWORD:0
 
 Computer
-SOFTWARE\Wow6432Node\Microsoft\VSCommon\15.0\SQM
-OptIn
-DWORD:0
-
-Computer
-SOFTWARE\Microsoft\SQMClient\Windows
-CEIPEnable
-DWORD:0
-
-Computer
 SOFTWARE\Policies\Microsoft\SQMClient\Windows
 CEIPEnable
 DWORD:0
@@ -1989,11 +1889,6 @@ DWORD:1
 
 Computer
 SOFTWARE\Policies\Microsoft\Windows\AppCompat
-AllowTelemetry
-DWORD:1
-
-Computer
-SOFTWARE\Policies\Microsoft\Windows\AppCompat
 DisableInventory
 DWORD:1
 
@@ -2064,11 +1959,6 @@ DWORD:1
 
 Computer
 SOFTWARE\Policies\Microsoft\Windows\CloudContent
-DisableWindowsSpotlightFeatures
-DWORD:1
-
-Computer
-SOFTWARE\Policies\Microsoft\Windows\CloudContent
 DisableThirdPartySuggestions
 DWORD:1
 
@@ -2110,16 +2000,6 @@ DWORD:1
 Computer
 SOFTWARE\Policies\Microsoft\Windows\CurrentVersion\PushNotifications
 NoCloudApplicationNotification
-DWORD:1
-
-Computer
-SOFTWARE\Policies\Microsoft\Windows\DataCollection
-MicrosoftEdgeDataOptIn
-DWORD:0
-
-Computer
-SOFTWARE\Policies\Microsoft\Windows\DataCollection
-DisableEnterpriseAuthProxy
 DWORD:1
 
 Computer
@@ -2513,14 +2393,14 @@ AllowClipboardHistory
 DWORD:1
 
 Computer
+SOFTWARE\Policies\Microsoft\Windows\TabletPC
+PreventHandwritingDataSharing
+DWORD:1
+
+Computer
 SOFTWARE\Policies\Microsoft\Windows\Task Scheduler\Maintenance
 WakeUp
 DWORD:0
-
-Computer
-SOFTWARE\Microsoft\Windows\Windows Error Reporting
-Disabled
-DWORD:1
 
 Computer
 SOFTWARE\Policies\Microsoft\Windows\Windows Error Reporting
@@ -2674,12 +2554,53 @@ DWORD:0
 
 Computer
 SOFTWARE\Policies\Microsoft\Windows Defender
+AllowFastServiceStartup
+DWORD:1
+
+Computer
+SOFTWARE\Policies\Microsoft\Windows Defender
 PUAProtection
 DWORD:1
 
 Computer
 SOFTWARE\Policies\Microsoft\Windows Defender\Exclusions
 DisableAutoExclusions
+DWORD:0
+
+
+Computer
+Software\Policies\Microsoft\Windows\WindowsUpdate
+DeferQualityUpdates
+DWORD:1
+
+Computer
+Software\Policies\Microsoft\Windows\WindowsUpdate
+DeferQualityUpdatesPeriodInDays
+DWORD:30
+
+Computer
+Software\Policies\Microsoft\Windows\WindowsUpdate
+DeferFeatureUpdates
+DWORD:1
+
+Computer
+Software\Policies\Microsoft\Windows\WindowsUpdate
+DeferFeatureUpdatesPeriodInDays
+DWORD:30
+
+Computer
+Software\Policies\Microsoft\Windows\WindowsUpdate
+ManagePreviewBuildsPolicyValue
+DWORD:1
+
+Computer
+Software\Policies\Microsoft\Windows\WindowsUpdate
+AUPowerManagement
+DWORD:0
+
+Computer
+Software\Policies\Microsoft\Windows\WindowsUpdate\AU
+AlwaysAutoRebootAtScheduledTime
 DWORD:0
 
 Computer
@@ -2843,11 +2764,6 @@ ExploitProtectionSettings
 SZ:C:\\MitigationPolicy\\DOD_EP_V3.xml
 
 Computer
-SOFTWARE\Policies\Microsoft\Windows NT\CurrentVersion\Software Protection Platform
-NoGenTicket
-DWORD:1
-
-Computer
 SOFTWARE\Policies\Microsoft\Windows NT\DNSClient
 EnableMulticast
 DWORD:0
@@ -2941,6 +2857,11 @@ Computer
 SOFTWARE\Policies\Microsoft\WindowsStore
 DisableOSUpgrade
 DWORD:1
+
+Computer
+SOFTWARE\Policies\Microsoft\WindowsStore
+AutoDownload
+DWORD:2
 
 Computer
 SOFTWARE\Policies\Microsoft\WMDRM
@@ -3128,21 +3049,6 @@ Compatibility Flags
 DWORD:1024
 
 Computer
-SYSTEM\CurrentControlSet\Control\Remote Assistance
-fAllowFullControl
-DWORD:0
-
-Computer
-SYSTEM\CurrentControlSet\Control\Remote Assistance
-fAllowToGetHelp
-DWORD:0
-
-Computer
-SYSTEM\CurrentControlSet\Control\Remote Assistance
-fEnableChatControl
-DWORD:0
-
-Computer
 System\CurrentControlSet\Control\Lsa
 EveryoneIncludesAnonymous
 DWORD:0
@@ -3263,6 +3169,16 @@ Start
 DWORD:4
 
 Computer
+System\CurrentControlSet\Services\FoxitReaderUpdateService
+Start
+DWORD:4
+
+Computer
+System\CurrentControlSet\Services\GoogleChromeElevationService
+Start
+DWORD:4
+
+Computer
 System\CurrentControlSet\Services\gupdate
 Start
 DWORD:4
@@ -3273,9 +3189,19 @@ Start
 DWORD:4
 
 Computer
-System\CurrentControlSet\Services\FoxitReaderUpdateService
-Start
-DWORD:4
+System\CurrentControlSet\Services\LanmanServer\Parameters
+DisableCompression
+DWORD:1
+
+Computer
+System\CurrentControlSet\Services\LanmanServer\Parameters
+RestrictNullSessAccess
+DWORD:1
+
+Computer
+System\CurrentControlSet\Services\LanmanServer\Parameters
+SMB1
+DWORD:0
 
 Computer
 System\CurrentControlSet\Services\LanmanWorkstation
@@ -3283,9 +3209,19 @@ Start
 DWORD:4
 
 Computer
+System\CurrentControlSet\Services\MicrosoftEdgeElevationService
+Start
+DWORD:4
+
+Computer
 System\CurrentControlSet\Services\MrxSmb10
 Start
 DWORD:4
+
+Computer
+System\CurrentControlSet\Services\Netbt\Parameters
+NoNameReleaseOnDemand
+DWORD:1
 
 Computer
 System\CurrentControlSet\Services\RemoteAccess
@@ -3301,6 +3237,21 @@ Computer
 System\CurrentControlSet\Services\RetailDemo
 Start
 DWORD:4
+
+Computer
+System\CurrentControlSet\Services\Tcpip\Parameters
+DisableIPSourceRouting
+DWORD:2
+
+Computer
+System\CurrentControlSet\Services\Tcpip\Parameters
+EnableICMPRedirect
+DWORD:0
+
+Computer
+System\CurrentControlSet\Services\Tcpip6\Parameters
+DisableIPSourceRouting
+DWORD:2
 
 Computer
 System\CurrentControlSet\Services\ZoomCptService
@@ -3319,6 +3270,11 @@ DWORD:4
 
 Computer
 System\CurrentControlSet\Services\IntelDSA
+Start
+DWORD:3
+
+Computer
+System\CurrentControlSet\Services\ClickToRunSvc
 Start
 DWORD:3
 
