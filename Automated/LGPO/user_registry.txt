@@ -23,6 +23,11 @@ AcceptedPrivacyPolicy
 DWORD:0
 
 User
+SOFTWARE\Microsoft\Windows\CurrentVersion\SearchSettings
+SafeSearchMode
+DWORD:0
+
+User
 SOFTWARE\Microsoft\Windows\CurrentVersion\GameDVR
 AppCaptureEnabled
 DWORD:0
@@ -95,11 +100,6 @@ DWORD:0
 User
 SOFTWARE\Microsoft\Windows\CurrentVersion\SearchSettings
 IsDeviceSearchHistoryEnabled
-DWORD:0
-
-User
-SOFTWARE\Microsoft\Windows\CurrentVersion\SearchSettings
-SafeSearchMode
 DWORD:0
 
 User
