@@ -1863,11 +1863,6 @@ TurnOffTouchInput
 DWORD:1
 
 Computer
-SOFTWARE\Policies\Microsoft\Windows\TabletPC
-PreventHandwritingDataSharing
-DWORD:1
-
-Computer
 SOFTWARE\Policies\Microsoft\TabletTip\1.7
 DisablePrediction
 DWORD:1
@@ -3124,11 +3119,6 @@ EnableICMPRedirect
 DWORD:0
 
 Computer
-System\CurrentControlSet\Services\Tcpip6\Parameters
-DisableIPSourceRouting
-DWORD:2
-
-Computer
 System\CurrentControlSet\Control\WMI\AutoLogger\AutoLogger-Diagtrack-Listener
 Start
 DWORD:0
@@ -3189,21 +3179,6 @@ Start
 DWORD:4
 
 Computer
-System\CurrentControlSet\Services\LanmanServer\Parameters
-DisableCompression
-DWORD:1
-
-Computer
-System\CurrentControlSet\Services\LanmanServer\Parameters
-RestrictNullSessAccess
-DWORD:1
-
-Computer
-System\CurrentControlSet\Services\LanmanServer\Parameters
-SMB1
-DWORD:0
-
-Computer
 System\CurrentControlSet\Services\LanmanWorkstation
 Start
 DWORD:4
@@ -3219,11 +3194,6 @@ Start
 DWORD:4
 
 Computer
-System\CurrentControlSet\Services\Netbt\Parameters
-NoNameReleaseOnDemand
-DWORD:1
-
-Computer
 System\CurrentControlSet\Services\RemoteAccess
 Start
 DWORD:4
@@ -3237,21 +3207,6 @@ Computer
 System\CurrentControlSet\Services\RetailDemo
 Start
 DWORD:4
-
-Computer
-System\CurrentControlSet\Services\Tcpip\Parameters
-DisableIPSourceRouting
-DWORD:2
-
-Computer
-System\CurrentControlSet\Services\Tcpip\Parameters
-EnableICMPRedirect
-DWORD:0
-
-Computer
-System\CurrentControlSet\Services\Tcpip6\Parameters
-DisableIPSourceRouting
-DWORD:2
 
 Computer
 System\CurrentControlSet\Services\ZoomCptService
