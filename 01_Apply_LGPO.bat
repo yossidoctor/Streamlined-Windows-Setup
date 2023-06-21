@@ -10,12 +10,6 @@ if %ErrorLevel% NEQ 0 (
     exit
 )
 
-echo    Note: if you're running Windows 10 Home Edition, you should manually apply 
-echo    'machine_registry.reg' after the script completion and 'user_registry.reg'
-echo    in the Automated\LGPO folder, and then run 'gpupdate /force' as an Administrator.
-pause
-
-
 echo Deleting current policies
 for %%D in (GroupPolicy, GroupPolicyUsers) do (
     RD /S /Q "%WinDir%\System32\%%D" >NUL 2>&1
