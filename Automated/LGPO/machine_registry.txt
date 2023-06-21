@@ -989,6 +989,11 @@ DWORD:1
 
 Computer
 SOFTWARE\Microsoft\Wcmsvc\WifiNetworkManager\config
+AutoConnectAllowedOEM
+DWORD:0
+
+Computer
+SOFTWARE\Microsoft\Wcmsvc\WifiNetworkManager\config
 DisableATMFD
 DWORD:1
 
@@ -996,11 +1001,6 @@ Computer
 SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\CredUI
 EnumerateAdministrators
 DWORD:0
-
-Computer
-SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer
-HideSCAMeetNow
-DWORD:1
 
 Computer
 SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer
@@ -2298,11 +2298,6 @@ SOFTWARE\Policies\Microsoft\Windows\Safer
 CREATEKEY
 
 Computer
-SOFTWARE\Policies\Microsoft\Windows\StorageHealth
-AllowDiskHealthModelUpdates
-DWORD:1
-
-Computer
 SOFTWARE\Policies\Microsoft\Windows\StorageSense
 AllowStorageSenseTemporaryFilesCleanup
 DWORD:1
@@ -2508,6 +2503,41 @@ DisableWebSearch
 DWORD:1
 
 Computer
+Software\Policies\Microsoft\Windows\WindowsUpdate
+DeferQualityUpdates
+DWORD:1
+
+Computer
+Software\Policies\Microsoft\Windows\WindowsUpdate
+DeferQualityUpdatesPeriodInDays
+DWORD:7
+
+Computer
+Software\Policies\Microsoft\Windows\WindowsUpdate
+DeferFeatureUpdates
+DWORD:1
+
+Computer
+Software\Policies\Microsoft\Windows\WindowsUpdate
+DeferFeatureUpdatesPeriodInDays
+DWORD:7
+
+Computer
+Software\Policies\Microsoft\Windows\WindowsUpdate
+ManagePreviewBuildsPolicyValue
+DWORD:0
+
+Computer
+Software\Policies\Microsoft\Windows\WindowsUpdate
+AUPowerManagement
+DWORD:0
+
+Computer
+Software\Policies\Microsoft\Windows\WindowsUpdate\AU
+AlwaysAutoRebootAtScheduledTime
+DWORD:0
+
+Computer
 SOFTWARE\Policies\Microsoft\Windows\WinRE
 DisableSetup
 DWORD:0
@@ -2560,42 +2590,6 @@ DWORD:1
 Computer
 SOFTWARE\Policies\Microsoft\Windows Defender\Exclusions
 DisableAutoExclusions
-DWORD:0
-
-
-Computer
-Software\Policies\Microsoft\Windows\WindowsUpdate
-DeferQualityUpdates
-DWORD:1
-
-Computer
-Software\Policies\Microsoft\Windows\WindowsUpdate
-DeferQualityUpdatesPeriodInDays
-DWORD:30
-
-Computer
-Software\Policies\Microsoft\Windows\WindowsUpdate
-DeferFeatureUpdates
-DWORD:1
-
-Computer
-Software\Policies\Microsoft\Windows\WindowsUpdate
-DeferFeatureUpdatesPeriodInDays
-DWORD:30
-
-Computer
-Software\Policies\Microsoft\Windows\WindowsUpdate
-ManagePreviewBuildsPolicyValue
-DWORD:1
-
-Computer
-Software\Policies\Microsoft\Windows\WindowsUpdate
-AUPowerManagement
-DWORD:0
-
-Computer
-Software\Policies\Microsoft\Windows\WindowsUpdate\AU
-AlwaysAutoRebootAtScheduledTime
 DWORD:0
 
 Computer
@@ -3089,36 +3083,6 @@ DriverLoadPolicy
 DWORD:3
 
 Computer
-System\CurrentControlSet\Services\LanmanServer\Parameters
-DisableCompression
-DWORD:1
-
-Computer
-System\CurrentControlSet\Services\LanmanServer\Parameters
-RestrictNullSessAccess
-DWORD:1
-
-Computer
-System\CurrentControlSet\Services\LanmanServer\Parameters
-SMB1
-DWORD:0
-
-Computer
-System\CurrentControlSet\Services\Netbt\Parameters
-NoNameReleaseOnDemand
-DWORD:1
-
-Computer
-System\CurrentControlSet\Services\Tcpip\Parameters
-DisableIPSourceRouting
-DWORD:2
-
-Computer
-System\CurrentControlSet\Services\Tcpip\Parameters
-EnableICMPRedirect
-DWORD:0
-
-Computer
 System\CurrentControlSet\Control\WMI\AutoLogger\AutoLogger-Diagtrack-Listener
 Start
 DWORD:0
@@ -3159,6 +3123,11 @@ Start
 DWORD:4
 
 Computer
+System\CurrentControlSet\Services\MapsBroker
+Start
+DWORD:4
+
+Computer
 System\CurrentControlSet\Services\FoxitReaderUpdateService
 Start
 DWORD:4
@@ -3189,11 +3158,6 @@ Start
 DWORD:4
 
 Computer
-System\CurrentControlSet\Services\MrxSmb10
-Start
-DWORD:4
-
-Computer
 System\CurrentControlSet\Services\RemoteAccess
 Start
 DWORD:4
@@ -3205,6 +3169,11 @@ DWORD:4
 
 Computer
 System\CurrentControlSet\Services\RetailDemo
+Start
+DWORD:4
+
+Computer
+System\CurrentControlSet\Services\BcastDVRUserService
 Start
 DWORD:4
 
@@ -3232,6 +3201,31 @@ Computer
 System\CurrentControlSet\Services\ClickToRunSvc
 Start
 DWORD:3
+
+Computer
+System\CurrentControlSet\Services\XblAuthManager
+Start
+DWORD:4
+
+Computer
+System\CurrentControlSet\Services\TabletInputService
+Start
+DWORD:4
+
+Computer
+System\CurrentControlSet\Services\XboxGipSvc
+Start
+DWORD:4
+
+Computer
+System\CurrentControlSet\Services\XboxNetApiSvc
+Start
+DWORD:4
+
+Computer
+System\CurrentControlSet\Services\XblGameSave
+Start
+DWORD:4
 
 ; PARSING COMPLETED.
 ; ----------------------------------------------------------------------
