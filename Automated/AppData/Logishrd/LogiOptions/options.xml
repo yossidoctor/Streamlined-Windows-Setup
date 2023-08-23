@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<useroptions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <useroption name="showLockNotifications" value="1" />
+  <useroption name="showLowBatteryNotifications" value="1" />
+  <useroption name="showBacklightingAdjustments" value="1" />
+  <useroption name="automaticCheckForUpdates" value="0" />
+  <useroption name="collectAnonymousData" value="0" />
+  <useroption name="isAutoBackupEnabled" value="1" />
+  <useroption name="showMicMuteNotifications" value="1" />
+  <useroption name="HideAnalytics" value="0" />
+  <useroption name="showMicMuteNotification" value="1" />
+  <useroption name="showFlowNotificationIcon" value="1" />
+</useroptions>

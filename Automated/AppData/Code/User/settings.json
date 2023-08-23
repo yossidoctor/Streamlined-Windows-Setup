@@ -1,0 +1,23 @@
+{
+    "workbench.colorTheme": "Default Dark Modern",
+    "telemetry.telemetryLevel": "off",
+    "update.enableWindowsBackgroundUpdates": false,
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "JetBrains Mono",
+    "editor.mouseWheelZoom": true,
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.hover.delay": 200,
+    "editor.minimap.enabled": false,
+    "update.showReleaseNotes": false,
+    "update.mode": "manual",
+    "security.workspace.trust.enabled": false,
+    "files.autoSave": "afterDelay",
+    "extensions.ignoreRecommendations": true,
+    "window.commandCenter": true,
+    "git.autofetch": true,
+    "vsicons.dontShowNewVersionMessage": true,
+    "workbench.editor.untitled.hint": "hidden",
+    "editor.quickSuggestions": {
+        "other": "off"
+    }
+}
