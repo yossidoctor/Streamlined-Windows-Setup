@@ -1,7 +1,7 @@
-# Windows-10-Setup-Automation-for-Security-and-Privacy
+# Streamlined Windows Setup
 
-This project was born out of a desire to optimize and improve the performance of Windows 10, providing a better overall experience. It aims to achieve an optimized Windows installation without extensive configurations.
+This project was born out of a desire to optimize and improve the performance of Windows, providing a better overall experience. It aims to achieve an optimized Windows installation without extensive configurations.
 
 The journey began a few years ago when I delved into the intricacies of Windows settings, driven by the curiosity to understand how the operating system functions under the hood.
 
-My initial goal was to optimize and improve its performance for everyday use while utilizing the hardware available, but my curiosity led me down a path of exploring from anything from Group Policy objects and hardening/debloating scripts, STIGs (Security Technical Implementation Guides) from the DoD and the NSA, and down to custom/stripped Windows 10 ISOs like Atlas-OS.
+My initial goal was to optimize and improve its performance for everyday use while utilizing the hardware available (an Intel NUC at the time), but my curiosity led me down a path of exploring anything from Group Policy objects, Windows Registry and hardening/debloating scripts, to STIGs (Security Technical Implementation Guides) and custom/stripped Windows ISOs like Windows-Ameliorated & Atlas-OS.
