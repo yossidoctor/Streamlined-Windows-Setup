@@ -1,0 +1,13 @@
+audio.play_bitrate_non_metered_enumeration=4
+app.player.volume=33127
+audio.play_bitrate_non_metered_migrated=true
+ui.hide_hpto=true
+audio.play_bitrate_enumeration=4
+audio.normalize_v2=false
+ui.right_panel_content=0
+ui.system_media_controls_enabled=false
+ui.minimize_to_tray=true
+audio.crossfade.time_v2=1208
+audio.sync_bitrate_enumeration=4
+audio.allow_downgrade=false
+audio.crossfade_v2=true
