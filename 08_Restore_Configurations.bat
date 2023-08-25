@@ -10,6 +10,9 @@ if %ErrorLevel% NEQ 0 (
     exit
 )
 
+echo This script needs to be executed once all ongoing installations have finished.
+pause
+
 echo Killing running services:
 for /f "tokens=*" %%a in (RunningServicesToStop.txt) do (
 	echo    %%a
