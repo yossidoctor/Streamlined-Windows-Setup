@@ -1,9 +1,7 @@
 <policyDefinitions revision="1.0" schemaVersion="1.0">
   <policyNamespaces>
-    <target prefix="fullarmor" namespace="FullArmor.Policies.CB6BAE83_9C3D_4969_A388_6BCRD12101012"/>
-    <using prefix="windows" namespace="Microsoft.Policies.Windows"/>
+    <target prefix="fullarmor" namespace="FullArmor.Policies.CB6BAE83_9C3D_4969_A388_6BCRD12120504"/>
   </policyNamespaces>
-  <supersededAdm fileName="C:\Users\user\Desktop\Foxit PDF Reader 6.0 EN Edit 0402 for admx.adm" />
   <resources minRequiredRevision="1.0" />
   <supportedOn>
     <definitions>
@@ -20,9 +18,6 @@
 			<parentCategory ref="Rb_RIBBON" />
 		</category>
 		<category name="Rb_Cont_RibbonBar_FindSearchAndReplace" displayName="$(string.Rb_Cont_RibbonBar_FindSearchAndReplace)" >
-			<parentCategory ref="Rb_Rib_TabElements" />
-		</category>
-		<category name="Rb_Cont_RibbonBar_FindFilter" displayName="$(string.Rb_Cont_RibbonBar_FindFilter)" >
 			<parentCategory ref="Rb_Rib_TabElements" />
 		</category>
 		<category name="Rb_Cont_File_Main_InputMode" displayName="$(string.Rb_Cont_File_Main_InputMode)" >
@@ -448,16 +443,40 @@
     </category>
   </categories>
   <policies>
-		<policy name="Rb_Cate_Itself_1" class="Both" displayName="$(string.Rb_Cate_Itself_1)" presentation="$(presentation.Rb_Cate_Itself_1)" key="Software\Policies\Foxit\PDFReader\Ribbon\TabElements\RibbonBar_FindSearchAndReplace" valueName="Visible">
+		<policy name="Rb_Cate_Itself_1" class="Both" displayName="$(string.Rb_Cate_Itself_1)" explainText="$(string.NULL_Explain)" presentation="$(presentation.Rb_Cate_Itself_1)" key="Software\Policies\Foxit\PDFReader\Ribbon\TabElements\Ribbonbar_Search" valueName="Visible">
 			<parentCategory ref = "Rb_Cont_RibbonBar_FindSearchAndReplace" />
 			<supportedOn ref = "SUPPORTED_WINXPSP2" />
 			<enabledValue><decimal value = "0" /></enabledValue>
 			<disabledValue><delete /></disabledValue>
 		</policy>
-		<policy name="Rb_Cate_SubItem_1" class="Both" displayName="$(string.Rb_Cate_SubItem_1)" explainText="$(string.Rb_Cont_SingleRibbon_Explain)" presentation="$(presentation.Rb_Cate_SubItem_1)" key="Software\Policies\Foxit\PDFReader\Ribbon\TabElements\RibbonBar_FindSearchAndReplace">
+		<policy name="Rb_Cate_SubItem_1" class="Both" displayName="$(string.Rb_Cate_SubItem_1)" explainText="$(string.Rb_Cont_SingleRibbon_Explain)" presentation="$(presentation.Rb_Cate_SubItem_1)" key="Software\Policies\Foxit\PDFReader\Ribbon\TabElements\Ribbonbar_Search">
 			<parentCategory ref = "Rb_Cont_RibbonBar_FindSearchAndReplace" />
 			<supportedOn ref = "SUPPORTED_WINXPSP2" />
 			<elements>
+				<boolean id="Rb_Ribbonbar_CommandSearch" valueName="Ribbonbar_CommandSearch">
+					<trueValue>
+						<decimal value = "0" />
+					</trueValue>
+					<falseValue>
+						<delete />
+					</falseValue>
+				</boolean>
+				<boolean id="Rb_RibbonBar_Find" valueName="RibbonBar_Find">
+					<trueValue>
+						<decimal value = "0" />
+					</trueValue>
+					<falseValue>
+						<delete />
+					</falseValue>
+				</boolean>
+				<boolean id="Rb_Sub_Ribbon_Help_Search" valueName="Ribbon_Help_Search">
+					<trueValue>
+						<decimal value = "0" />
+					</trueValue>
+					<falseValue>
+						<delete />
+					</falseValue>
+				</boolean>
 				<boolean id="Rb_Sub_RibbonBar_FindSearch" valueName="RibbonBar_FindSearch">
 					<trueValue>
 						<decimal value = "0" />
@@ -476,69 +495,9 @@
 				</boolean>
 			</elements>
 		</policy>
-		<policy name="Rb_Cont_RibbonBar_Find" class="Both" displayName="$(string.Rb_Cont_RibbonBar_Find)" presentation="$(presentation.Rb_Cont_RibbonBar_Find)" key="Software\Policies\Foxit\PDFReader\Ribbon\TabElements" valueName="RibbonBar_Find">
+		<policy name="Rb_Cont_RibbonBar_Find" class="Both" displayName="$(string.Rb_Cont_RibbonBar_Find)" explainText="$(string.NULL_Explain)" presentation="$(presentation.Rb_Cont_RibbonBar_Find)" key="Software\Policies\Foxit\PDFReader\Ribbon\TabElements" valueName="RibbonBar_Find">
 			<parentCategory ref="Rb_Rib_TabElements" />
 			<supportedOn ref = "SUPPORTED_WINXPSP2" />
-		</policy>
-		<policy name="Rb_Cate_Itself_2" class="Both" displayName="$(string.Rb_Cate_Itself_2)" presentation="$(presentation.Rb_Cate_Itself_2)" key="Software\Policies\Foxit\PDFReader\Ribbon\TabElements\RibbonBar_FindFilter" valueName="Visible">
-			<parentCategory ref = "Rb_Cont_RibbonBar_FindFilter" />
-			<supportedOn ref = "SUPPORTED_WINXPSP2" />
-			<enabledValue><decimal value = "0" /></enabledValue>
-			<disabledValue><delete /></disabledValue>
-		</policy>
-		<policy name="Rb_Cate_SubItem_2" class="Both" displayName="$(string.Rb_Cate_SubItem_2)" explainText="$(string.Rb_Cont_SingleRibbon_Explain)" presentation="$(presentation.Rb_Cate_SubItem_2)" key="Software\Policies\Foxit\PDFReader\Ribbon\TabElements\RibbonBar_FindFilter">
-			<parentCategory ref = "Rb_Cont_RibbonBar_FindFilter" />
-			<supportedOn ref = "SUPPORTED_WINXPSP2" />
-			<elements>
-				<boolean id="Rb_Sub_Button_FindWholeWord" valueName="Button_FindWholeWord">
-					<trueValue>
-						<decimal value = "0" />
-					</trueValue>
-					<falseValue>
-						<delete />
-					</falseValue>
-				</boolean>
-				<boolean id="Rb_Sub_Button_FindCaseSensitive" valueName="Button_FindCaseSensitive">
-					<trueValue>
-						<decimal value = "0" />
-					</trueValue>
-					<falseValue>
-						<delete />
-					</falseValue>
-				</boolean>
-				<boolean id="Rb_Sub_Button_FindIncludeBookmarks" valueName="Button_FindIncludeBookmarks">
-					<trueValue>
-						<decimal value = "0" />
-					</trueValue>
-					<falseValue>
-						<delete />
-					</falseValue>
-				</boolean>
-				<boolean id="Rb_Sub_Button_FindIncludeComments" valueName="Button_FindIncludeComments">
-					<trueValue>
-						<decimal value = "0" />
-					</trueValue>
-					<falseValue>
-						<delete />
-					</falseValue>
-				</boolean>
-				<boolean id="Rb_Sub_Button_FindMenuHighlightAll" valueName="Button_FindMenuHighlightAll">
-					<trueValue>
-						<decimal value = "0" />
-					</trueValue>
-					<falseValue>
-						<delete />
-					</falseValue>
-				</boolean>
-				<boolean id="Rb_Sub_RibbonBar_FindProperties" valueName="RibbonBar_FindProperties">
-					<trueValue>
-						<decimal value = "0" />
-					</trueValue>
-					<falseValue>
-						<delete />
-					</falseValue>
-				</boolean>
-			</elements>
 		</policy>
 		<policy name="Rb_Cont_File_Main_SaveAs" class="Both" displayName="$(string.Rb_Cont_File_Main_SaveAs)" explainText="$(string.Rb_Cont_CheckFunction_Explain)" presentation="$(presentation.Rb_Cont_File_Main_SaveAs)" key="Software\Policies\Foxit\PDFReader\Ribbon\TabElements">
 			<parentCategory ref="Rb_Rib_TabElements" />
@@ -660,17 +619,17 @@
 				</boolean>
 			</elements>
 		</policy>
-		<policy name="Rb_Cont_FoxitCloud_Tabbar_ID_User" class="Both" displayName="$(string.Rb_Cont_FoxitCloud_Tabbar_ID_User)" presentation="$(presentation.Rb_Cont_FoxitCloud_Tabbar_ID_User)" key="Software\Policies\Foxit\PDFReader\Ribbon\TabElements" valueName="FoxitCloud_Tabbar_ID_User">
+		<policy name="Rb_Cont_FoxitCloud_Tabbar_ID_User" class="Both" displayName="$(string.Rb_Cont_FoxitCloud_Tabbar_ID_User)" explainText="$(string.NULL_Explain)" presentation="$(presentation.Rb_Cont_FoxitCloud_Tabbar_ID_User)" key="Software\Policies\Foxit\PDFReader\Ribbon\TabElements" valueName="FoxitCloud_Tabbar_ID_User">
 			<parentCategory ref="Rb_Rib_TabElements" />
 			<supportedOn ref = "SUPPORTED_WINXPSP2" />
 		</policy>
-		<policy name="Rb_Cate_SelfCategory_1" class="Both" displayName="$(string.Rb_Cate_SelfCategory_1)" presentation="$(presentation.Rb_Cate_SelfCategory_1)" key="Software\Policies\Foxit\PDFReader\Ribbon\Ribbon_Category_File" valueName="Visible">
+		<policy name="Rb_Cate_SelfCategory_1" class="Both" displayName="$(string.Rb_Cate_SelfCategory_1)" explainText="$(string.NULL_Explain)" presentation="$(presentation.Rb_Cate_SelfCategory_1)" key="Software\Policies\Foxit\PDFReader\Ribbon\Ribbon_Category_File" valueName="Visible">
 			<parentCategory ref = "Rb_Rib_Ribbon_Category_File" />
 			<supportedOn ref = "SUPPORTED_WINXPSP2" />
 			<enabledValue><decimal value = "0" /></enabledValue>
 			<disabledValue><delete /></disabledValue>
 		</policy>
-		<policy name="Rb_Cate_SelfPanel_1" class="Both" displayName="$(string.Rb_Cate_SelfPanel_1)" presentation="$(presentation.Rb_Cate_SelfPanel_1)" key="Software\Policies\Foxit\PDFReader\Ribbon\Ribbon_Category_File\FILE_Panel_Main" valueName="Visible">
+		<policy name="Rb_Cate_SelfPanel_1" class="Both" displayName="$(string.Rb_Cate_SelfPanel_1)" explainText="$(string.NULL_Explain)" presentation="$(presentation.Rb_Cate_SelfPanel_1)" key="Software\Policies\Foxit\PDFReader\Ribbon\Ribbon_Category_File\FILE_Panel_Main" valueName="Visible">
 			<parentCategory ref = "Rb_Panel_FILE_Panel_Main" />
 			<supportedOn ref = "SUPPORTED_WINXPSP2" />
 			<enabledValue><decimal value = "0" /></enabledValue>
@@ -950,7 +909,7 @@
 				</boolean>
 			</elements>
 		</policy>
-		<policy name="Rb_Cate_SelfCategory_2" class="Both" displayName="$(string.Rb_Cate_SelfCategory_2)" presentation="$(presentation.Rb_Cate_SelfCategory_2)" key="Software\Policies\Foxit\PDFReader\Ribbon\Ribbon_Category_Home" valueName="Visible">
+		<policy name="Rb_Cate_SelfCategory_2" class="Both" displayName="$(string.Rb_Cate_SelfCategory_2)" explainText="$(string.NULL_Explain)" presentation="$(presentation.Rb_Cate_SelfCategory_2)" key="Software\Policies\Foxit\PDFReader\Ribbon\Ribbon_Category_Home" valueName="Visible">
 			<parentCategory ref = "Rb_Rib_Ribbon_Category_Home" />
 			<supportedOn ref = "SUPPORTED_WINXPSP2" />
 			<enabledValue><decimal value = "0" /></enabledValue>
@@ -1550,7 +1509,7 @@
 				</boolean>
 			</elements>
 		</policy>
-		<policy name="Rb_Cate_SelfCategory_3" class="Both" displayName="$(string.Rb_Cate_SelfCategory_3)" presentation="$(presentation.Rb_Cate_SelfCategory_3)" key="Software\Policies\Foxit\PDFReader\Ribbon\Ribbon_Category_Review" valueName="Visible">
+		<policy name="Rb_Cate_SelfCategory_3" class="Both" displayName="$(string.Rb_Cate_SelfCategory_3)" explainText="$(string.NULL_Explain)" presentation="$(presentation.Rb_Cate_SelfCategory_3)" key="Software\Policies\Foxit\PDFReader\Ribbon\Ribbon_Category_Review" valueName="Visible">
 			<parentCategory ref = "Rb_Rib_Ribbon_Category_Review" />
 			<supportedOn ref = "SUPPORTED_WINXPSP2" />
 			<enabledValue><decimal value = "0" /></enabledValue>
@@ -2330,7 +2289,7 @@
 				</boolean>
 			</elements>
 		</policy>
-		<policy name="Rb_Cate_SelfCategory_4" class="Both" displayName="$(string.Rb_Cate_SelfCategory_4)" presentation="$(presentation.Rb_Cate_SelfCategory_4)" key="Software\Policies\Foxit\PDFReader\Ribbon\Ribbon_Category_View" valueName="Visible">
+		<policy name="Rb_Cate_SelfCategory_4" class="Both" displayName="$(string.Rb_Cate_SelfCategory_4)" explainText="$(string.NULL_Explain)" presentation="$(presentation.Rb_Cate_SelfCategory_4)" key="Software\Policies\Foxit\PDFReader\Ribbon\Ribbon_Category_View" valueName="Visible">
 			<parentCategory ref = "Rb_Rib_Ribbon_Category_View" />
 			<supportedOn ref = "SUPPORTED_WINXPSP2" />
 			<enabledValue><decimal value = "0" /></enabledValue>
@@ -3142,7 +3101,7 @@
 				</boolean>
 			</elements>
 		</policy>
-		<policy name="Rb_Cate_SelfCategory_5" class="Both" displayName="$(string.Rb_Cate_SelfCategory_5)" presentation="$(presentation.Rb_Cate_SelfCategory_5)" key="Software\Policies\Foxit\PDFReader\Ribbon\Ribbon_Category_Form" valueName="Visible">
+		<policy name="Rb_Cate_SelfCategory_5" class="Both" displayName="$(string.Rb_Cate_SelfCategory_5)" explainText="$(string.NULL_Explain)" presentation="$(presentation.Rb_Cate_SelfCategory_5)" key="Software\Policies\Foxit\PDFReader\Ribbon\Ribbon_Category_Form" valueName="Visible">
 			<parentCategory ref = "Rb_Rib_Ribbon_Category_Form" />
 			<supportedOn ref = "SUPPORTED_WINXPSP2" />
 			<enabledValue><decimal value = "0" /></enabledValue>
@@ -3368,7 +3327,7 @@
 				</boolean>
 			</elements>
 		</policy>
-		<policy name="Rb_Cate_SelfCategory_6" class="Both" displayName="$(string.Rb_Cate_SelfCategory_6)" presentation="$(presentation.Rb_Cate_SelfCategory_6)" key="Software\Policies\Foxit\PDFReader\Ribbon\Ribbon_Category_Protect" valueName="Visible">
+		<policy name="Rb_Cate_SelfCategory_6" class="Both" displayName="$(string.Rb_Cate_SelfCategory_6)" explainText="$(string.NULL_Explain)" presentation="$(presentation.Rb_Cate_SelfCategory_6)" key="Software\Policies\Foxit\PDFReader\Ribbon\Ribbon_Category_Protect" valueName="Visible">
 			<parentCategory ref = "Rb_Rib_Ribbon_Category_Protect" />
 			<supportedOn ref = "SUPPORTED_WINXPSP2" />
 			<enabledValue><decimal value = "0" /></enabledValue>
@@ -3760,7 +3719,7 @@
 				</boolean>
 			</elements>
 		</policy>
-		<policy name="Rb_Cate_SelfCategory_7" class="Both" displayName="$(string.Rb_Cate_SelfCategory_7)" presentation="$(presentation.Rb_Cate_SelfCategory_7)" key="Software\Policies\Foxit\PDFReader\Ribbon\Ribbon_Category_Foxit_Sign" valueName="Visible">
+		<policy name="Rb_Cate_SelfCategory_7" class="Both" displayName="$(string.Rb_Cate_SelfCategory_7)" explainText="$(string.NULL_Explain)" presentation="$(presentation.Rb_Cate_SelfCategory_7)" key="Software\Policies\Foxit\PDFReader\Ribbon\Ribbon_Category_Foxit_Sign" valueName="Visible">
 			<parentCategory ref = "Rb_Rib_Ribbon_Category_Foxit_Sign" />
 			<supportedOn ref = "SUPPORTED_WINXPSP2" />
 			<enabledValue><decimal value = "0" /></enabledValue>
@@ -4096,7 +4055,7 @@
 				</boolean>
 			</elements>
 		</policy>
-		<policy name="Rb_Cate_SelfCategory_8" class="Both" displayName="$(string.Rb_Cate_SelfCategory_8)" presentation="$(presentation.Rb_Cate_SelfCategory_8)" key="Software\Policies\Foxit\PDFReader\Ribbon\Ribbon_Category_Share" valueName="Visible">
+		<policy name="Rb_Cate_SelfCategory_8" class="Both" displayName="$(string.Rb_Cate_SelfCategory_8)" explainText="$(string.NULL_Explain)" presentation="$(presentation.Rb_Cate_SelfCategory_8)" key="Software\Policies\Foxit\PDFReader\Ribbon\Ribbon_Category_Share" valueName="Visible">
 			<parentCategory ref = "Rb_Rib_Ribbon_Category_Share" />
 			<supportedOn ref = "SUPPORTED_WINXPSP2" />
 			<enabledValue><decimal value = "0" /></enabledValue>
@@ -4470,7 +4429,7 @@
 				</boolean>
 			</elements>
 		</policy>
-		<policy name="Rb_Cate_SelfCategory_9" class="Both" displayName="$(string.Rb_Cate_SelfCategory_9)" presentation="$(presentation.Rb_Cate_SelfCategory_9)" key="Software\Policies\Foxit\PDFReader\Ribbon\Ribbon_Category_ConnectedPDF" valueName="Visible">
+		<policy name="Rb_Cate_SelfCategory_9" class="Both" displayName="$(string.Rb_Cate_SelfCategory_9)" explainText="$(string.NULL_Explain)" presentation="$(presentation.Rb_Cate_SelfCategory_9)" key="Software\Policies\Foxit\PDFReader\Ribbon\Ribbon_Category_ConnectedPDF" valueName="Visible">
 			<parentCategory ref = "Rb_Rib_Ribbon_Category_ConnectedPDF" />
 			<supportedOn ref = "SUPPORTED_WINXPSP2" />
 			<enabledValue><decimal value = "0" /></enabledValue>
@@ -4736,7 +4695,7 @@
 				</boolean>
 			</elements>
 		</policy>
-		<policy name="Rb_Cate_SelfCategory_10" class="Both" displayName="$(string.Rb_Cate_SelfCategory_10)" presentation="$(presentation.Rb_Cate_SelfCategory_10)" key="Software\Policies\Foxit\PDFReader\Ribbon\Ribbon_Category_Help" valueName="Visible">
+		<policy name="Rb_Cate_SelfCategory_10" class="Both" displayName="$(string.Rb_Cate_SelfCategory_10)" explainText="$(string.NULL_Explain)" presentation="$(presentation.Rb_Cate_SelfCategory_10)" key="Software\Policies\Foxit\PDFReader\Ribbon\Ribbon_Category_Help" valueName="Visible">
 			<parentCategory ref = "Rb_Rib_Ribbon_Category_Help" />
 			<supportedOn ref = "SUPPORTED_WINXPSP2" />
 			<enabledValue><decimal value = "0" /></enabledValue>
@@ -4938,7 +4897,7 @@
 				</boolean>
 			</elements>
 		</policy>
-		<policy name="Rb_Cate_SelfCategory_11" class="Both" displayName="$(string.Rb_Cate_SelfCategory_11)" presentation="$(presentation.Rb_Cate_SelfCategory_11)" key="Software\Policies\Foxit\PDFReader\Ribbon\Ribbon_Category_FillSign" valueName="Visible">
+		<policy name="Rb_Cate_SelfCategory_11" class="Both" displayName="$(string.Rb_Cate_SelfCategory_11)" explainText="$(string.NULL_Explain)" presentation="$(presentation.Rb_Cate_SelfCategory_11)" key="Software\Policies\Foxit\PDFReader\Ribbon\Ribbon_Category_FillSign" valueName="Visible">
 			<parentCategory ref = "Rb_Rib_Ribbon_Category_FillSign" />
 			<supportedOn ref = "SUPPORTED_WINXPSP2" />
 			<enabledValue><decimal value = "0" /></enabledValue>
@@ -5282,7 +5241,7 @@
 				</boolean>
 			</elements>
 		</policy>
-		<policy name="Rb_Cate_SelfCategory_12" class="Both" displayName="$(string.Rb_Cate_SelfCategory_12)" presentation="$(presentation.Rb_Cate_SelfCategory_12)" key="Software\Policies\Foxit\PDFReader\Ribbon\Ribbon_Category_Portfolio" valueName="Visible">
+		<policy name="Rb_Cate_SelfCategory_12" class="Both" displayName="$(string.Rb_Cate_SelfCategory_12)" explainText="$(string.NULL_Explain)" presentation="$(presentation.Rb_Cate_SelfCategory_12)" key="Software\Policies\Foxit\PDFReader\Ribbon\Ribbon_Category_Portfolio" valueName="Visible">
 			<parentCategory ref = "Rb_Rib_Ribbon_Category_Portfolio" />
 			<supportedOn ref = "SUPPORTED_WINXPSP2" />
 			<enabledValue><decimal value = "0" /></enabledValue>
@@ -5440,7 +5399,7 @@
 				</boolean>
 			</elements>
 		</policy>
-		<policy name="Rb_Cate_SelfCategory_13" class="Both" displayName="$(string.Rb_Cate_SelfCategory_13)" presentation="$(presentation.Rb_Cate_SelfCategory_13)" key="Software\Policies\Foxit\PDFReader\Ribbon\Ribbon_Category_DmsForLegal" valueName="Visible">
+		<policy name="Rb_Cate_SelfCategory_13" class="Both" displayName="$(string.Rb_Cate_SelfCategory_13)" explainText="$(string.NULL_Explain)" presentation="$(presentation.Rb_Cate_SelfCategory_13)" key="Software\Policies\Foxit\PDFReader\Ribbon\Ribbon_Category_DmsForLegal" valueName="Visible">
 			<parentCategory ref = "Rb_Rib_Ribbon_Category_DmsForLegal" />
 			<supportedOn ref = "SUPPORTED_WINXPSP2" />
 			<enabledValue><decimal value = "0" /></enabledValue>
@@ -5605,14 +5564,6 @@
             <delete />
           </falseValue>
         </boolean>
-        <boolean id="PLUGIN_EpubViewer" valueName="EpubViewer">
-          <trueValue>
-            <string>EpubViewer.fpi</string>
-          </trueValue>
-          <falseValue>
-            <delete />
-          </falseValue>
-        </boolean>
         <boolean id="PLUGIN_FoxitCloudLogin_1" valueName="FoxitAccountManagement">
           <trueValue>
             <string>FoxitAccountManagement.fpi</string>
@@ -5669,6 +5620,38 @@
             <delete />
           </falseValue>
         </boolean>
+		<boolean id="Plugin_Browser" valueName="Browser">
+          <trueValue>
+            <string>Browser.fpi</string>
+          </trueValue>
+          <falseValue>
+            <delete />
+          </falseValue>
+        </boolean>
+		<boolean id="PL_Collaboration" valueName="Collaboration">
+          <trueValue>
+            <string>Collaboration.fpi</string>
+          </trueValue>
+          <falseValue>
+            <delete />
+          </falseValue>
+        </boolean>
+		<boolean id="Plugin_Accessibility" valueName="Accessibility">
+          <trueValue>
+            <string>Accessibility.fpi</string>
+          </trueValue>
+          <falseValue>
+            <delete />
+          </falseValue>
+        </boolean>
+		<boolean id="PL_Assistant" valueName="AiAssistant">
+			<trueValue>
+				<string>AiAssistant.fpi</string>
+			</trueValue>
+			<falseValue>
+				<delete />
+			</falseValue>
+		</boolean>
 		<boolean id="PL_ALFP" valueName="Alfresco">
           <trueValue>
             <string>Alfresco.fpi</string>
@@ -5685,6 +5668,88 @@
             <delete />
           </falseValue>
         </boolean>
+		
+			<boolean id="PL_LoupeTool" valueName="Loupe Tool">
+			<trueValue>
+				<string>LoupeTool.fpi</string>
+			</trueValue>
+			<falseValue>
+				<delete />
+			</falseValue>
+			</boolean>
+			<boolean id="PL_Bookmark" valueName="Bookmark">
+			<trueValue>
+				<string>Bookmark.fpi</string>
+			</trueValue>
+			<falseValue>
+				<delete />
+			</falseValue>
+			</boolean>
+			<boolean id="PL_Layers" valueName="Layers">
+			<trueValue>
+				<string>LayerPanelToolPlugin.fpi</string>
+			</trueValue>
+			<falseValue>
+				<delete />
+			</falseValue>
+			</boolean>
+			<boolean id="PL_Email" valueName="Email">
+			<trueValue>
+				<string>Email.fpi</string>
+			</trueValue>
+			<falseValue>
+				<delete />
+			</falseValue>
+			</boolean>
+			<boolean id="PL_FillSign" valueName="Fill and Sign">
+			<trueValue>
+				<string>InkSign.fpi</string>
+			</trueValue>
+			<falseValue>
+				<delete />
+			</falseValue>
+			</boolean>
+			<boolean id="PL_Signature" valueName="Digital Signature">
+			<trueValue>
+				<string>Signature.fpi</string>
+			</trueValue>
+			<falseValue>
+				<delete />
+			</falseValue>
+			</boolean>
+			<boolean id="PL_DocProcess" valueName="Document Process">
+			<trueValue>
+				<string>DocProcess.fpi</string>
+			</trueValue>
+			<falseValue>
+				<delete />
+			</falseValue>
+			</boolean>
+			<boolean id="PL_DMSforLegal" valueName="DMSforLegal">
+			<trueValue>
+				<string>DMSforLegal.fpi</string>
+			</trueValue>
+			<falseValue>
+				<delete />
+			</falseValue>
+			</boolean>
+			<boolean id="PL_Security" valueName="Security">
+			<trueValue>
+				<string>Security.fpi</string>
+			</trueValue>
+			<falseValue>
+				<delete />
+			</falseValue>
+			</boolean>
+
+			<boolean id="PL_Portfolio" valueName="Portfolio">
+			<trueValue>
+				<string>Portfolio.fpi</string>
+			</trueValue>
+			<falseValue>
+				<delete />
+			</falseValue>
+			</boolean>
       </elements>
     </policy>
     <policy name="PREF_AboutDialog" class="Both" displayName="$(string.PREF_AboutDialog)" explainText="$(string.AboutDialog_Explain)" presentation="$(presentation.PREF_AboutDialog)" key="Software\Policies\Foxit\PDFReader\Preferences">
@@ -6088,6 +6153,16 @@
         <decimal value="0" />
       </disabledValue>
     </policy>
+    <policy name="AIP_SaveDoc" class="Both" displayName="$(string.AIP_SaveDoc)" explainText="$(string.AIP_SaveDoc_Explain)" presentation="$(presentation.AIP_SaveDoc)" key="Software\Policies\Foxit\PDFReader\RMS\Preferences" valueName="bMIPCheckPolicyOnDocSave">
+      <parentCategory ref="PREFERENCES_RMS" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+	  <enabledValue>
+        <decimal value="1" />
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0" />
+      </disabledValue>
+    </policy>
     <policy name="RMS_SaveAs" class="Both" displayName="$(string.RMS_SaveAs)" explainText="$(string.RMS_SaveAs_Explain)" presentation="$(presentation.RMS_SaveAs)" key="Software\Policies\Foxit\PDFReader\RMS\Preferences" valueName="AllowSaveAs">
       <parentCategory ref="PREFERENCES_RMS" />
       <supportedOn ref="SUPPORTED_WINXPSP2" />
@@ -6262,12 +6337,6 @@
       <elements>
           <text id="CPDF_InternalUpdateServer_URL" valueName="InternalUpdate" />   
       </elements>
-    </policy>	
-    <policy name="PREF_TellMeWhat" class="Both" displayName="$(string.PREF_TellMeWhat)" explainText="$(string.PREF_TellMeWhat_Explain)" presentation="$(presentation.PREF_TellMeWhat)" key="Software\Policies\Foxit\PDFReader\Preferences" valueName="CommandSearch">
-      <parentCategory ref="PREFERENCES" />
-      <supportedOn ref="SUPPORTED_WINXPSP2" />
-	  <enabledValue><decimal value="1"/></enabledValue>
-      <disabledValue><decimal value="0"/></disabledValue>
     </policy>
     <policy name="PREF_DisablePDFviewerSwitching" class="Both" displayName="$(string.PREF_DisablePDFviewerSwitching)" explainText="$(string.PREF_DisablePDFviewerSwitching_Explain)" presentation="$(presentation.PREF_DisablePDFviewerSwitching)" key="Software\Policies\Foxit\PDFReader\Preferences" valueName="bDisablePDFHandlerSwitching">
       <parentCategory ref="PREF_FILEASSOCIATION" />
@@ -6448,6 +6517,24 @@
         </enum>
       </elements>
     </policy>	
+	<policy name="PREF_PDFAMode" class="Both" displayName="$(string.PREF_PDFAMode)" explainText="$(string.PREF_PDFAMode_Explain)" presentation="$(presentation.PREF_PDFAMode)" key="Software\Policies\Foxit\PDFReader\Preferences">
+      <parentCategory ref="PREFERENCES" />
+      <supportedOn ref="SUPPORTED_WINXPSP2" />
+      <elements>
+        <enum id="PREF_PDFAModeOpt" valueName="PDFAMode">
+		  <item displayName="$(string.PREF_PDFAModeNever)">
+            <value>
+              <decimal value="0" />
+            </value>
+		  </item>
+		  <item displayName="$(string.PREF_PDFAModeOnly)">
+            <value>
+              <decimal value="1" />
+            </value>
+		  </item>
+        </enum>
+      </elements>
+    </policy>
 	<policy name="ECMServerSharePoint" class="Both" displayName="$(string.ECMServerSharePoint)" explainText="$(string.ECMServerSharePoint_Explain)" presentation="$(presentation.ECMServerSharePoint)" key="Software\Policies\Foxit\PDFReader\Plugins\ECMServerSharePoint">
       <parentCategory ref="PLUGIN" />
       <supportedOn ref="SUPPORTED_WINXPSP2" />
