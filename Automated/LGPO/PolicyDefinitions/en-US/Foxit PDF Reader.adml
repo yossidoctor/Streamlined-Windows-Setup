@@ -5,8 +5,8 @@
   </description>
   <resources>      
     <stringTable>
-	  <string id="FOXIT">Foxit PDF Reader 12.0</string>
-      <string id="FoxitVersion">Foxit PDF Reader Version 12.0</string>
+	  <string id="FOXIT">Foxit PDF Reader</string>
+      <string id="FoxitVersion">Foxit PDF Reader Version 13.0</string>
 
 
 			<string id="Rb_Cate_SelfCategory">Self Category</string>
@@ -33,14 +33,17 @@ Choose "Add to Quick Access Toolbar" to add this feature to Quick Access Toolbar
 Note: Hidden features cannot be added to Quick Access Toolbar.</string>
 			<string id="Rb_Cont_SingleRibbon_Explain">Choose "Enabled" to configure the features in Ribbon.
 
-Check the features you want to hide in Ribbon.</string>
+Check the features you want to hide in Ribbon.</string>			
 			<string id="Rb_Cont_CheckFunction_HideRibbon">Hide this feature</string>
 			<string id="Rb_Cont_CheckFunction_AddToQAT">Add to Quick Access Toolbar</string>
 			<string id="Rb_Cate_Itself_1">Itself</string>
 			<string id="Rb_Cate_SubItem_1">SubItem</string>
 			<string id="Rb_Sub_RibbonBar_FindSearch">Advanced Search...</string>
 			<string id="Rb_Sub_Comment_Drawing_SearchHighlight">Search &amp;&amp; Highlight</string>
-			<string id="Rb_Cont_RibbonBar_FindSearchAndReplace">Search or replace</string>
+			<string id="Rb_Cont_RibbonBar_FindSearchAndReplace">Search</string>
+			<string id="Rb_Sub_Ribbon_Help_Search">Get Help on</string>
+			<string id="Rb_Ribbonbar_CommandSearch">Actions</string>
+			<string id="Rb_RibbonBar_Find">Find in Document</string>
 			<string id="Rb_Cont_RibbonBar_Find">Find Box</string>
 			<string id="Rb_Cate_Itself_2">Itself</string>
 			<string id="Rb_Cate_SubItem_2">SubItem</string>
@@ -655,6 +658,31 @@ Note: ConnectedPDF features are only available in the Simplified Chinese version
 Only applications with .fpi extensions can be removed from Foxit PDF Reader. You can find the plugins in the program folder of Foxit PDF Reader (..\Foxit PDF Reader\plugins).</string>
       <string id="MainFrameName_Explain">Enable this option to change the program's name. The default is 'Foxit PDF Reader'.</string>
 
+
+	  <string id="PL_OPENTEXT">OpenText eDOCS DM</string>
+	  <string id="PL_ODBP">OneDrive For Business</string>	
+	  <string id="PL_CRP">Cross Reference</string>
+	  <string id="PL_CALP">Calculator</string>
+	  <string id="PL_ComparePDF">ComparePDF</string>
+	  <string id="PL_WOXP">Worldox</string>
+      <string id="PL_Assistant">AI Assistant</string>
+      <string id="PL_LoupeTool">Loupe Tool</string>
+      <string id="PL_Bookmark">Bookmark</string>
+	  <string id="PL_FXExport">Convert Export</string>
+	  <string id="PL_Layers">Layers</string>
+	  <string id="PL_Email">Email</string>
+	  <string id="PL_FillSign">Fill and Sign</string>
+	  <string id="PL_Signature">Digital Signature</string>  
+	  <string id="PL_DocProcess">Document Process</string>
+	  <string id="PL_Destinations">Destinations</string>
+	  <string id="PL_DMSforLegal">DMSforLegal</string>
+	  <string id="PL_Security">Security</string>
+	  <string id="PL_PageFormat">Page Format</string>
+	  <string id="PL_PageOrganizer">Page Organizer</string>	
+	  <string id="PL_PDFOptimizer">PDF Optimizer</string>
+	  <string id="PL_PlgDynLoader">Plugin Dynamic Loader</string>
+	  <string id="PL_PlgPltfm">Plugin Platform Manager</string>
+	  <string id="PL_Portfolio">Portfolio</string>
       <string id="Plugin_ShareReview">ShareReview</string>
       <string id="PL_BPP">BoxPlugin</string>
       <string id="PL_U3DBP">U3DBrowser</string>
@@ -756,6 +784,8 @@ Choose whether or not the Status Bar will be shown. If you choose 'Auto-hide Sta
       <string id="RemoveSpecificalPlugins">Remove Specific Plugins</string>
       <string id="RemoveSpecificPlugins">Remove Specific Plugins</string>
       <string id="RMS_Add">Add 'protected' to the name of encrypted files</string>
+      <string id="AIP_SaveDoc">AIP default and mandatory labeling</string>
+      <string id="AIP_SaveDoc_Explain">Enable this option to allow users to set up default and mandatory labeling.</string>
       <string id="RMS_Add_Explain">Enable this option to append (protected) to the end of the file name of encrypted files.</string>
       <string id="RMS_DR">Dynamic Revocation</string>
       <string id="RMS_DR_Explain">Enable this option to turn on the dynamic revocation feature in the client. Please refer to the user manual to configure the web service when trying using this feature.
@@ -813,6 +843,9 @@ Disable this option to not use Read Mode by default and allow users to freely en
 
 This setting will change the corresponding setting in Preferences > Documents> Open Settings. </string>
 	  <string id="PL_AIPP">AIP Sensitivity labels</string>
+	  <string id="Plugin_Accessibility">Accessibility</string>
+	  <string id="Plugin_Browser">Browser</string>
+	  <string id="PL_Collaboration">Collaboration</string>
 	  <string id="PL_ALFP">Alfresco</string>
 	  <string id="PL_FoxitSign">Foxit eSign</string>
       <string id="PREF_COLLECTDATA">User Experience Improvement</string>
@@ -870,9 +903,9 @@ This will change the setting in Preferences > Security > Protected View.</string
 	 <string id="PREF_ProtectedViewAllFiles">All Files</string>
 	 <string id="PREF_ProtectedViewOff">Off</string>
 	 <string id="PREF_ProtectedViewOpt">Settings:</string>
-     <string id="PREF_MultipleInstances">Multiple Instances</string>
-	 <string id="PREF_MultipleInstances_Explain">Enable this option to allow multiple instances. 
-Disable this option to not allow multiple instances. 
+     <string id="PREF_MultipleInstances">Multiple Windows</string>
+	 <string id="PREF_MultipleInstances_Explain">Enable this option to always open files in a new window. 
+Disable this option to not open files in a new window.
 This will change the corresponding setting in Preferences > Documents. </string>
 	 <string id="Cate_Justify">Justify</string>
      <string id="PREF_PrintGDIOutput">Use GDI+ Output for all types of printer</string>
@@ -902,8 +935,10 @@ Disable this option to not show TELL ME WHAT YOU WANT TO DO.</string>
 NOTE: If enabled, all the setting items in Preferences>File Associations will be inaccessible.</string>
 	 <string id="PREF_LockAutoCompleteInForm_Explain">Enable this option to lock the Auto-Complete feature and disable the corresponding setting in Preferences > Forms.</string>
 	 <string id="PREF_LockAutoCompleteInForm">Lock the Auto-Complete in Form Filling</string>
-	 <string id="PREF_DisablePrivilegedLocations_Explain">Enable this option to disable and lock the end user's ability to add files, folders, and hosts as a privileged location prevents them from assigning trust and thereby exempting that location from enhanced security restrictions.</string>
-	 <string id="PREF_DisablePrivilegedLocations">Disable Privileged Locations</string> 
+	 <string id="PREF_DisablePrivilegedLocations_Explain">Enable this option to lock the end user's ability to add files, folders, and hosts as a privileged location to prevent them from continuing to assign trust. 
+	 
+This will change the corresponding setting in Preferences>Security.</string>
+	 <string id="PREF_DisablePrivilegedLocations">Lock Privileged Locations</string> 
 	   <string id="INTERNETCONNECTION">Features which require internet connection</string>
 	   <string id="INTERNETCONNECTION_Explain">This will change the corresponding setting in Preferences > General.</string>
 	   <string id="Cate_Itself_94">Itself</string>
@@ -948,7 +983,10 @@ Choose "Block access" to restrict access to all URLs.</string>
 Disable this option to disallow running JavaScript in PDF files.
 
 This will change the corresponding setting in Preferences > JavaScript > Enable JavaScript Action.</string>
+  <string id="PREF_PDFAMode">PDF/A View Mode</string>
+  <string id="PREF_PDFAMode_Explain">Enbale this option and select the preferred PDF/A View Mode. 
 
+This will change the settings in Preferences > Document > PDF/A View mode.</string>
 	 <string id="PREF_AutoUpdateCert">Load trusted certificates from Foxit server</string>	  
 	 <string id="PREF_AutoUpdateCert_Explain">This setting specifies the way to load "trusted certificates from Foxit server".
 
@@ -960,10 +998,13 @@ If this setting is enabled, three options will be available:
 This will change the setting in Preferences > Trust Manager >Automatic Foxit Approved Trust List Updates.
 
 If this setting is disabled or not configured, the default will take effect.</string>
+     <string id="PREF_PDFAModeNever">Never</string>
+	 <string id="PREF_PDFAModeOnly">Only for PDF/A documents</string>
 	 <string id="PREF_AutoUpdateCertDisable">Disable</string>
 	 <string id="PREF_AutoUpdateCertAsk">Enable &amp; Ask before updating</string>
 	 <string id="PREF_AutoUpdateCertSilent">Enable &amp; Install silently</string>
 	 <string id="PREF_AutoUpdateCertOpt">Settings:</string>	 
+	 <string id="PREF_PDFAModeOpt">Settings:</string>
 	 <string id="ECMServerSharePoint">Configure SharePoint server URL</string>
 	 <string id="ECMServerSharePointList">SharePoint Server URL:</string>	 
    	 <string id="ECMServerSharePoint_Explain">This option allows you to configure a server URL for SharePoint. Any changes made here will be synchronized to the corresponding settings under File>Open or Save As> Add a place>SharePoint.
@@ -987,11 +1028,15 @@ If this option is disabled or not configured, the default will take effect.</str
 Input the file path, folder path or host name which need to be added to the privileged location list.</string>
 	<string id="PREF_UpdateConfig">Update Settings</string>
 	<string id="PREF_UpdateConfig_Explain">Settings for update features.</string>
+	<string id="NULL_Explain"></string>
     </stringTable>
     <presentationTable>
 			<presentation id="Rb_Cate_Itself_1" />
 			<presentation id="Rb_Cate_SubItem_1">
-				<checkBox refId="Rb_Sub_RibbonBar_FindSearch">Advanced Search...</checkBox>
+				<checkBox refId="Rb_Ribbonbar_CommandSearch">Actions</checkBox>
+				<checkBox refId="Rb_RibbonBar_Find">Find in Document</checkBox>
+				<checkBox refId="Rb_Sub_Ribbon_Help_Search">Get Help on</checkBox>
+				<checkBox refId="Rb_Sub_RibbonBar_FindSearch">Advanced Search</checkBox>
 				<checkBox refId="Rb_Sub_Comment_Drawing_SearchHighlight">Search &amp;&amp; Highlight</checkBox>
 			</presentation>
 			<presentation id="Rb_Cont_RibbonBar_Find" />
@@ -2238,25 +2283,38 @@ Input the file path, folder path or host name which need to be added to the priv
         <listBox refId="AppTrustManagerList">Trusted Application List: </listBox>
       </presentation>
       <presentation id="RemovePlugins">
-        <checkBox refId="Plugin_Updater">Updater</checkBox>
-        <checkBox refId="Plugin_Licensemanager">LicenseManager</checkBox>
-        <checkBox refId="Plugin_Speech">Speech</checkBox>
-        <checkBox refId="Remove_RMS2">FRMSPlgV2</checkBox>
-        <checkBox refId="Plugin_SharePoint">SharePoint</checkBox>
-        <checkBox refId="Plugin_DocuSign">DocuSign</checkBox>
-        <checkBox refId="PLUGIN_CS">CommentsSummary</checkBox>
-        <checkBox refId="PLUGIN_DropboxPlugin">DropboxPlugin</checkBox>
-        <checkBox refId="PLUGIN_EpubViewer">EpubViewer</checkBox>
-        <checkBox refId="PLUGIN_FoxitCloudLogin_1">FoxitAccountManagement</checkBox>
-        <checkBox refId="PLUGIN_OneDrivePlugin">OneDrivePlugin</checkBox>
-        <checkBox refId="PLUGIN_GoogleDrivePlugin">GoogleDrivePlugin</checkBox>
-        <checkBox refId="PL_BPP">BoxPlugin</checkBox>
-        <checkBox refId="PL_U3DBP">U3DBrowser</checkBox>
-		<checkBox refId="Plugin_ShareReview">Share Review</checkBox>
-		<checkBox refId="PL_WIPP">WIP</checkBox>	
+        <checkBox refId="Plugin_Accessibility">Accessibility</checkBox>
+		<checkBox refId="PL_Assistant">AI Assistant</checkBox>
 		<checkBox refId="PL_AIPP">AIP Sensitivity labels</checkBox>
-		<checkBox refId="PL_ALFP">Alfresco</checkBox>
+		<checkBox refId="PL_ALFP">Alfresco</checkBox>		
+        <checkBox refId="PL_Bookmark">Bookmark</checkBox>		
+		<checkBox refId="PL_BPP">BoxPlugin</checkBox>	
+		<checkBox refId="Plugin_Browser">Browser</checkBox>	
+        <checkBox refId="PL_Collaboration">Collaboration</checkBox>			
+		<checkBox refId="PLUGIN_CS">CommentsSummary</checkBox>	
+		<checkBox refId="PL_Signature">Digital Signature</checkBox>
+		<checkBox refId="PL_DocProcess">Document Process</checkBox>
+		<checkBox refId="PL_DMSforLegal">DMSforLegal</checkBox>			 
+		<checkBox refId="Plugin_DocuSign">DocuSign</checkBox>
+		<checkBox refId="PLUGIN_DropboxPlugin">DropboxPlugin</checkBox>
+		<checkBox refId="PL_Email">Email</checkBox>	
+		<checkBox refId="PL_FillSign">Fill and Sign</checkBox>
 		<checkBox refId="PL_FoxitSign">Foxit eSign</checkBox>
+		<checkBox refId="PLUGIN_FoxitCloudLogin_1">FoxitAccountManagement</checkBox>
+		<checkBox refId="PLUGIN_GoogleDrivePlugin">GoogleDrivePlugin</checkBox>
+		<checkBox refId="PL_Layers">Layers</checkBox>		
+		<checkBox refId="Plugin_Licensemanager">LicenseManager</checkBox>
+		<checkBox refId="PL_LoupeTool">Loupe Tool</checkBox>
+		<checkBox refId="PLUGIN_OneDrivePlugin">OneDrivePlugin</checkBox>
+		<checkBox refId="PL_Portfolio">Portfolio</checkBox>
+		<checkBox refId="Remove_RMS2">FRMSPlgV2</checkBox>
+		<checkBox refId="PL_Security">Security</checkBox>
+		<checkBox refId="Plugin_Speech">Speech</checkBox>
+		<checkBox refId="Plugin_SharePoint">SharePoint</checkBox> 
+		<checkBox refId="Plugin_ShareReview">Share Review</checkBox>
+        <checkBox refId="Plugin_Updater">Updater</checkBox>
+        <checkBox refId="PL_U3DBP">U3DBrowser</checkBox>
+		<checkBox refId="PL_WIPP">WIP</checkBox>
       </presentation>
       <presentation id="PREF_AboutDialog">
         <textBox refId="PREF_Copyright">
@@ -2329,6 +2387,7 @@ Input the file path, folder path or host name which need to be added to the priv
       </presentation>
       <presentation id="RMS_ENCRYPT_METADATA" />
       <presentation id="RMS_Add" />
+      <presentation id="AIP_SaveDoc" />
       <presentation id="RMS_SaveAs" />
       <presentation id="RMS_Interoperability" />
       <presentation id="CPDF_AutoConvertConnectedPDF" />
@@ -2380,7 +2439,7 @@ Input the file path, folder path or host name which need to be added to the priv
 		<checkBox refId="ECMPlugin_RMSV2">RMSV2</checkBox>
 		<checkBox refId="ECMPlugin_FileOpen">FileOpen</checkBox>
 		<checkBox refId="ECMPlugin_DocuSign">DocuSign</checkBox>
-		<checkBox refId="ECMPlugin_ShareReview">ShareReview</checkBox>
+		<checkBox refId="ECMPlugin_ShareReview">Share Review</checkBox>
 		<checkBox refId="FoxitInner_HelpCenter">Help Center</checkBox>
       </presentation>  	 
 	  <presentation id="PREF_NotUseQuickTimePlayer" />	
@@ -2389,6 +2448,9 @@ Input the file path, folder path or host name which need to be added to the priv
       </presentation> 	 
 	  <presentation id="PREF_CreateDigitalIDs" />
 	  <presentation id="PREF_EnableJavascript" />	
+	  <presentation id="PREF_PDFAMode" >
+        <dropdownList refId="PREF_PDFAModeOpt" noSort="true" defaultItem="0">Settings:</dropdownList>
+      </presentation>
 	  <presentation id="PREF_AutoUpdateCert">
         <dropdownList refId="PREF_AutoUpdateCertOpt" noSort="true" defaultItem="0">Settings:</dropdownList>
       </presentation>

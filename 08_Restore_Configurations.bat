@@ -10,9 +10,6 @@ if %ErrorLevel% NEQ 0 (
     exit
 )
 
-echo This script needs to be executed once all ongoing installations have finished.
-pause
-
 echo Killing running services:
 for /f "tokens=*" %%a in (RunningServicesToStop.txt) do (
 	echo    %%a
@@ -25,8 +22,8 @@ mkdir "%UserProfile%\Pictures\Screenshots"
 REM echo Overriding Notepad with Notepad++
 REM reg add "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\notepad.exe" /v "Debugger" /t REG_SZ /d "\"%ProgramFiles(x86)%\Notepad++\notepad++.exe\" -notepadStyleCmdline -z" /f
 
-REM echo Restoring EqualizerAPO configuration
-echo F | XCopy "EqualizerAPOconfig.txt" "%ProgramFiles%\EqualizerAPO\config\config.txt" /I /Y /Q >NUL 2>&1
+@REM REM echo Restoring EqualizerAPO configuration
+@REM echo F | XCopy "EqualizerAPOconfig.txt" "%ProgramFiles%\EqualizerAPO\config\config.txt" /I /Y /Q >NUL 2>&1
 
 echo Adding Desktop and Downloads folders to user environment variables
 setx "Desktop" "%UserProfile%\Desktop" >NUL 2>&1
@@ -48,11 +45,11 @@ for /f "tokens=*" %%a in ('dir /a:-d /b ^| findstr /r ".reg$"') do (
 cd ..
 
 echo.
-echo Disabling scheduled tasks
-for /f "tokens=*" %%a in (ScheduledTasksToDisable.txt) do (
-	echo 	%%a
-	PowerShell.exe -ExecutionPolicy Bypass -Command "Get-ScheduledTask '%%a' | Disable-ScheduledTask" >NUL 2>&1
-)
+@REM echo Disabling scheduled tasks
+@REM for /f "tokens=*" %%a in (ScheduledTasksToDisable.txt) do (
+@REM 	echo 	%%a
+@REM 	PowerShell.exe -ExecutionPolicy Bypass -Command "Get-ScheduledTask '%%a' | Disable-ScheduledTask" >NUL 2>&1
+@REM )
 
 del /f /q "%AppData%\Microsoft\Windows\SendTo\Compressed (zipped) folder*" >NUL 2>&1
 del /f /q "%AppData%\Microsoft\Windows\SendTo\WinSCP (for upload)*" >NUL 2>&1
