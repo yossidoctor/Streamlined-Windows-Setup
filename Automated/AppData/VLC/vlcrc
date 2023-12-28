@@ -1,5 +1,5 @@
 ﻿###
-###  vlc 3.0.18
+###  vlc 3.0.20
 ###
 
 ###
@@ -357,11 +357,8 @@
 # Use hardware blending support (boolean)
 #direct3d11-hw-blending=1
 
-# ? (integer)
-#winrt-d3dcontext=0
-
-# ? (integer)
-#winrt-swapchain=0
+# Video Upscaling Mode (string)
+#d3d11-upscale-mode=linear
 
 [transform] # Video transformation filter
 
@@ -716,7 +713,7 @@
 #freetype-opacity=255
 
 # Text default color (integer)
-freetype-color=14342874
+#freetype-color=16777215
 
 # Force bold (boolean)
 #freetype-bold=0
@@ -734,10 +731,10 @@ freetype-color=14342874
 #freetype-outline-color=0
 
 # Outline thickness (integer)
-freetype-outline-thickness=6
+#freetype-outline-thickness=4
 
 # Shadow opacity (integer)
-freetype-shadow-opacity=0
+#freetype-shadow-opacity=128
 
 # Shadow color (integer)
 #freetype-shadow-color=0
@@ -757,7 +754,7 @@ freetype-shadow-opacity=0
 [stream_out_transcode] # Transcode stream output
 
 # Video encoder (string)
-#sout-transcode-venc=
+sout-transcode-venc=any
 
 # Destination video codec (string)
 #sout-transcode-vcodec=
@@ -793,7 +790,7 @@ freetype-shadow-opacity=0
 #sout-transcode-vfilter=
 
 # Audio encoder (string)
-#sout-transcode-aenc=
+sout-transcode-aenc=any
 
 # Destination audio codec (string)
 #sout-transcode-acodec=
@@ -814,7 +811,7 @@ freetype-shadow-opacity=0
 #sout-transcode-afilter=
 
 # Subtitle encoder (string)
-#sout-transcode-senc=
+sout-transcode-senc=any
 
 # Destination subtitle codec (string)
 #sout-transcode-scodec=
@@ -941,7 +938,7 @@ freetype-shadow-opacity=0
 #sout-rtp-rtcp-mux=0
 
 # Caching value (ms) (integer)
-sout-rtp-caching=1000
+#sout-rtp-caching=300
 
 # SRTP key (hexadecimal) (string)
 #sout-rtp-key=
@@ -1260,7 +1257,7 @@ sout-rtp-caching=1000
 #marq-y=0
 
 # Marquee position (integer)
-marq-position=0
+#marq-position=-1
 
 # Opacity (integer)
 #marq-opacity=255
@@ -1298,7 +1295,7 @@ marq-position=0
 #logo-opacity=255
 
 # Logo position (integer)
-logo-position=0
+#logo-position=-1
 
 [audiobargraph_v] # Audio Bar Graph Video sub source
 
@@ -1471,7 +1468,7 @@ logo-position=0
 #sout-avi-subject=
 
 # Encoder (string)
-#sout-avi-encoder=VLC Media Player - 3.0.18 Vetinari
+#sout-avi-encoder=VLC Media Player - 3.0.20 Vetinari
 
 # Keywords (string)
 #sout-avi-keywords=
@@ -1595,10 +1592,10 @@ logo-position=0
 [skins2] # Skinnable Interface
 
 # Skin to use (string)
-skins2-last=C:\Program Files\VideoLAN\VLC\skins\default.vlt
+#skins2-last=
 
 # Config of last used skin (string)
-skins2-config=["aboutwin" "aboutwinwin-main" 1115 634 330 171 0]["eqwin" "eqwin-main" 1115 634 330 171 0]["fullscreenController" "fsc_normal" 1030 1267 500 130 0]["main" "normal" 261 109 1823 1168 1]["plwin" "plwin-normal" 1158 617 500 350 0]
+#skins2-config=
 
 # Systray icon (boolean)
 #skins2-systray=1
@@ -1621,7 +1618,7 @@ skins2-config=["aboutwin" "aboutwinwin-main" 1115 634 330 171 0]["eqwin" "eqwin-
 #qt-minimal-view=0
 
 # Systray icon (boolean)
-qt-system-tray=0
+#qt-system-tray=1
 
 # Show notification popup on track change (integer)
 #qt-notification=1
@@ -1654,7 +1651,7 @@ qt-system-tray=0
 #qt-recentplay-filter=
 
 # Continue playback? (integer)
-qt-continue=2
+#qt-continue=1
 
 # Activate the updates availability notification (boolean)
 qt-updates-notif=0
@@ -1702,7 +1699,7 @@ qt-privacy-ask=0
 #qt-fs-sensitivity=3
 
 # When to raise the interface (integer)
-qt-auto-raise=3
+#qt-auto-raise=1
 
 [vc1] # VC1 video demuxer
 
@@ -2043,7 +2040,7 @@ qt-auto-raise=3
 [gestures] # Mouse gestures control interface
 
 # Motion threshold (10-100) (integer)
-gestures-threshold=10
+#gestures-threshold=30
 
 # Trigger button (string)
 #gestures-button=left
@@ -2292,10 +2289,10 @@ gestures-threshold=10
 #sout-x264-stats=x264_2pass.log
 
 # Default preset setting used (string)
-sout-x264-preset=ultrafast
+#sout-x264-preset=
 
 # Default tune setting used (string)
-sout-x264-tune=film
+#sout-x264-tune=
 
 # x264 advanced options (string)
 #sout-x264-options=
@@ -2881,7 +2878,7 @@ sout-x264-tune=film
 #avcodec-fast=0
 
 # Skip the loop filter for H.264 decoding (integer)
-avcodec-skiploopfilter=4
+#avcodec-skiploopfilter=0
 
 # Debug mask (integer)
 #avcodec-debug=0
@@ -2890,7 +2887,7 @@ avcodec-skiploopfilter=4
 #avcodec-codec=
 
 # Hardware decoding (string)
-avcodec-hw=none
+#avcodec-hw=any
 
 # Threads (integer)
 #avcodec-threads=0
@@ -2992,7 +2989,7 @@ avcodec-hw=none
 #sout-avformat-options=
 
 # Reset timestamps (boolean)
-#sout-avformat-reset-ts=0
+#sout-avformat-reset-ts=1
 
 # Advanced options (string)
 #avio-options=
@@ -3342,7 +3339,7 @@ avcodec-hw=none
 [udp] # UDP stream output
 
 # Caching value (ms) (integer)
-sout-udp-caching=1000
+#sout-udp-caching=300
 
 # Group packets (integer)
 #sout-udp-group=1
@@ -3440,7 +3437,7 @@ sout-udp-caching=1000
 #sout-livehttp-ratecontrol=0
 
 # Allow cache (boolean)
-sout-livehttp-caching=1
+#sout-livehttp-caching=0
 
 # Use randomized IV for encryption (boolean)
 #sout-livehttp-generate-iv=0
@@ -4086,7 +4083,7 @@ sout-livehttp-caching=1
 #audio-time-stretch=1
 
 # Audio output module (string)
-aout=any
+#aout=
 
 # Media role (string)
 #role=video
@@ -4098,7 +4095,7 @@ aout=any
 #audio-visual=none
 
 # Audio resampler (string)
-audio-resampler=any
+#audio-resampler=
 
 # Enable video (boolean)
 #video=1
@@ -4140,16 +4137,16 @@ audio-resampler=any
 #disable-screensaver=1
 
 # Show media title on video (boolean)
-video-title-show=0
+#video-title-show=1
 
 # Show video title for x milliseconds (integer)
-video-title-timeout=1000
+#video-title-timeout=5000
 
 # Position of video title (integer)
 #video-title-position=8
 
 # Hide cursor and fullscreen controller after x milliseconds (integer)
-mouse-hide-timeout=800
+#mouse-hide-timeout=1000
 
 # Video snapshot directory (or filename) (string)
 #snapshot-path=
@@ -4161,7 +4158,7 @@ mouse-hide-timeout=800
 #snapshot-format=png
 
 # Display video snapshot preview (boolean)
-snapshot-preview=0
+#snapshot-preview=1
 
 # Use sequential numbers instead of timestamps (boolean)
 #snapshot-sequential=0
@@ -4224,7 +4221,7 @@ snapshot-preview=0
 #deinterlace-mode=auto
 
 # Video output module (string)
-vout=any
+#vout=
 
 # Video filter module (string)
 #video-filter=
@@ -4308,7 +4305,7 @@ menu-language=English
 #run-time=0.000000
 
 # Fast seek (boolean)
-input-fast-seek=1
+#input-fast-seek=0
 
 # Playback speed (float)
 #rate=1.000000
@@ -4398,13 +4395,13 @@ input-fast-seek=1
 #file-caching=1000
 
 # Live capture caching (ms) (integer)
-live-caching=1000
+#live-caching=300
 
 # Disc caching (ms) (integer)
-disc-caching=1000
+#disc-caching=300
 
 # Network caching (ms) (integer)
-network-caching=333
+#network-caching=1000
 
 # Clock reference average counter (integer)
 #cr-average=40
@@ -4443,7 +4440,7 @@ network-caching=333
 #encoder=
 
 # Access module (string)
-access=any
+#access=
 
 # Demux module (string)
 #demux=any
@@ -4488,7 +4485,7 @@ access=any
 #mux=
 
 # Access output module (string)
-access_output=any
+#access_output=
 
 # Hop limit (TTL) (integer)
 #ttl=-1
@@ -4515,7 +4512,7 @@ vod-server=any
 #keystore=
 
 # Increase the priority of the process (boolean)
-high-priority=1
+#high-priority=0
 
 # Clock source (string)
 #clock-source=
@@ -4536,7 +4533,7 @@ high-priority=1
 #play-and-stop=0
 
 # Play and pause (boolean)
-play-and-pause=1
+#play-and-pause=0
 
 # Start paused (boolean)
 #start-paused=0
@@ -4587,13 +4584,13 @@ play-and-pause=1
 #services-discovery=
 
 # Show advanced options (boolean)
-advanced=1
+#advanced=0
 
 # Interface interaction (boolean)
 #interact=1
 
 # Locally collect statistics (boolean)
-#stats=1
+stats=0
 
 # Interface module (string)
 #intf=
@@ -4602,7 +4599,7 @@ advanced=1
 #extraintf=
 
 # Control interfaces (string)
-control=gestures
+#control=
 
 # Mouse wheel vertical axis control (integer)
 #hotkeys-y-wheel-mode=0
@@ -4623,7 +4620,7 @@ control=gestures
 #key-leave-fullscreen=Esc
 
 # Play/Pause (string)
-global-key-play-pause=Media Play Pause
+#global-key-play-pause=
 
 # Play/Pause (string)
 #key-play-pause=Space
@@ -5133,10 +5130,10 @@ global-key-play-pause=Media Play Pause
 #key-zoom-double=Alt+4
 
 # Very short jump length (integer)
-#extrashort-jump-size=3
+extrashort-jump-size=5
 
 # Short jump length (integer)
-short-jump-size=4
+short-jump-size=5
 
 # Medium jump length (integer)
 #medium-jump-size=60
@@ -5298,7 +5295,7 @@ short-jump-size=4
 #bookmark3=
 
 # Playlist bookmark 4 (string)
-bookmark4=file:///C:/Users/Yossi/Downloads/Love%2C%20Death%20%26%20Robots%20-%20Season%201%20%282019%29%20%5B1080p%5D/Love%2C%20Death%20%26%20Robots%20-%20S01E08%20-%20Good%20Hunting.mkv
+#bookmark4=
 
 # Playlist bookmark 5 (string)
 #bookmark5=
