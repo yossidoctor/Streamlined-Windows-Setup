@@ -1,0 +1,109 @@
+;===============================================================================
+; P2421D.inf        Ver. 1.2        09/30/2019
+;
+; Copyright (c) 2019 Dell Corporation
+;
+; This is a Microsoft Windows setup information file for the Dell Color Monitor.
+;===============================================================================
+
+[Version]
+signature="$CHICAGO$"
+Class=Monitor
+ClassGuid={4D36E96E-E325-11CE-BFC1-08002BE10318}
+Provider=%Dell%
+CatalogFile=P2421D.cat
+DriverVer=09/30/2019, 1.0.0.0
+
+[DestinationDirs]
+DefaultDestDir = 11
+P2421D_HDMI.CopyFiles = 23
+P2421D_DisplayPort.CopyFiles = 23
+
+
+[SourceDisksNames]
+1=%diskname%,,,
+
+[SourceDisksFiles]
+P2421D.icm=1
+
+
+[Monitor_Service.Install]
+DisplayName    = %Monitor.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\monitor.sys
+
+[Manufacturer]
+%DELL%=DELL,NTx86,NTAMD64 
+
+[DELL]  
+%P2421D_HDMI%=P2421D_HDMI.Install, Monitor\DELD0FF
+%P2421D_DisplayPort%=P2421D_DisplayPort.Install, Monitor\DELD0FE
+
+[DELL.NTx86]
+%P2421D_HDMI%=P2421D_HDMI.Install, Monitor\DELD0FF
+%P2421D_DisplayPort%=P2421D_DisplayPort.Install, Monitor\DELD0FE
+
+[DELL.NTAMD64]  
+%P2421D_HDMI%=P2421D_HDMI.Install, Monitor\DELD0FF
+%P2421D_DisplayPort%=P2421D_DisplayPort.Install, Monitor\DELD0FE
+
+[ControlFlags]
+ExcludeFromSelect.nt=Monitor\DELD0FF
+ExcludeFromSelect.nt=Monitor\DELD0FE
+
+
+[P2421D_HDMI.Install]
+DelReg=DEL_CURRENT_REG    
+AddReg=P2421D_HDMI.AddReg
+CopyFiles=P2421D_HDMI.CopyFiles
+
+[P2421D_HDMI.Install.Services]
+AddService = monitor, %SPSVCINST_ASSOCSERVICE%,Monitor_Service.Install
+
+
+[P2421D_DisplayPort.Install]
+DelReg=DEL_CURRENT_REG    
+AddReg=P2421D_DisplayPort.AddReg
+CopyFiles=P2421D_DisplayPort.CopyFiles
+
+[P2421D_DisplayPort.Install.Services]
+AddService = monitor, %SPSVCINST_ASSOCSERVICE%,Monitor_Service.Install
+
+     
+[DEL_CURRENT_REG]
+HKR,MODES
+HKR,,MaxResolution
+HKR,,DPMS
+HKR,,ICMProfile
+
+
+[P2421D_HDMI.AddReg]
+HKR,"MODES\2560,1440",Mode1,,"29.0-113.0,49.0-75.0,+,+"
+HKR,,MaxResolution,,"2560,1440"
+HKR,,DPMS,,1
+HKR,,ICMProfile,0,"P2421D.icm"
+
+[P2421D_DisplayPort.AddReg]
+HKR,"MODES\2560,1440",Mode1,,"29.0-113.0,49.0-75.0,+,+"
+HKR,,MaxResolution,,"2560,1440"
+HKR,,DPMS,,1
+HKR,,ICMProfile,0,"P2421D.icm"
+
+
+[P2421D_HDMI.CopyFiles]
+P2421D.icm
+
+[P2421D_DisplayPort.CopyFiles]
+P2421D.icm
+
+[Strings]
+SPSVCINST_ASSOCSERVICE = 0x00000002
+Monitor.SVCDESC = "Microsoft Monitor Class Function Driver Service"
+
+Dell="Dell Inc."
+diskname="Dell Monitor Installation Disk"
+
+P2421D_HDMI="DELL P2421D(HDMI)"
+P2421D_DisplayPort="DELL P2421D(DisplayPort)"
