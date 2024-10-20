@@ -1,5 +1,8 @@
 @echo off
 
+:: Changes the working directory to the script directory
+pushd %~dp0
+
 :: Check if the script is running with administrative privileges
 net session >NUL 2>&1
 if %ErrorLevel% NEQ 0 (
