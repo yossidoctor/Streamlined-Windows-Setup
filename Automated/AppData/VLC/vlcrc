@@ -1,5 +1,5 @@
 ﻿###
-###  vlc 3.0.20
+###  vlc 3.0.21
 ###
 
 ###
@@ -359,6 +359,9 @@
 
 # Video Upscaling Mode (string)
 #d3d11-upscale-mode=linear
+
+# HDR Output Mode (string)
+#d3d11-hdr-mode=auto
 
 [transform] # Video transformation filter
 
@@ -1468,7 +1471,7 @@ sout-transcode-senc=any
 #sout-avi-subject=
 
 # Encoder (string)
-#sout-avi-encoder=VLC Media Player - 3.0.20 Vetinari
+#sout-avi-encoder=VLC Media Player - 3.0.21 Vetinari
 
 # Keywords (string)
 #sout-avi-keywords=
@@ -1627,7 +1630,7 @@ sout-transcode-senc=any
 #qt-start-minimized=0
 
 # Pause the video playback when minimized (boolean)
-#qt-pause-minimized=0
+qt-pause-minimized=1
 
 # Windows opacity between 0.1 and 1 (float)
 #qt-opacity=1.000000
@@ -1636,7 +1639,7 @@ sout-transcode-senc=any
 #qt-fs-opacity=0.800000
 
 # Resize interface to the native video size (boolean)
-#qt-video-autoresize=1
+qt-video-autoresize=0
 
 # Show playing item name in window title (boolean)
 #qt-name-in-title=1
@@ -1651,10 +1654,10 @@ sout-transcode-senc=any
 #qt-recentplay-filter=
 
 # Continue playback? (integer)
-#qt-continue=1
+qt-continue=2
 
 # Activate the updates availability notification (boolean)
-qt-updates-notif=0
+#qt-updates-notif=1
 
 # Number of days between two update checks (integer)
 #qt-updates-days=3
@@ -1693,7 +1696,7 @@ qt-privacy-ask=0
 #qt-icon-change=1
 
 # Maximum Volume displayed (integer)
-#qt-max-volume=125
+qt-max-volume=150
 
 # Fullscreen controller mouse sensitivity (integer)
 #qt-fs-sensitivity=3
@@ -2723,16 +2726,16 @@ qt-privacy-ask=0
 #sout-qsv-software=0
 
 # Codec Profile (string)
-#sout-qsv-h264-profile=unspecified
+sout-qsv-h264-profile=decide
 
 # Codec Level (string)
-#sout-qsv-h264-level=unspecified
+sout-qsv-h264-level=decide
 
 # Codec Profile (string)
-#sout-qsv-mpeg2-profile=unspecified
+sout-qsv-mpeg2-profile=decide
 
 # Codec Level (string)
-#sout-qsv-mpeg2-level=unspecified
+sout-qsv-mpeg2-level=decide
 
 # Group of Picture size (integer)
 #sout-qsv-gop-size=32
@@ -3350,7 +3353,7 @@ qt-privacy-ask=0
 #poll-timeout=-1
 
 # SRT latency (ms) (integer)
-#latency=120
+latency=1000
 
 # Password for stream encryption (string)
 #passphrase=
@@ -4083,7 +4086,7 @@ qt-privacy-ask=0
 #audio-time-stretch=1
 
 # Audio output module (string)
-#aout=
+aout=any
 
 # Media role (string)
 #role=video
@@ -4095,7 +4098,7 @@ qt-privacy-ask=0
 #audio-visual=none
 
 # Audio resampler (string)
-#audio-resampler=
+audio-resampler=any
 
 # Enable video (boolean)
 #video=1
@@ -4272,13 +4275,13 @@ text-renderer=any
 #sub-track=-1
 
 # Audio language (string)
-audio-language=English
+audio-language=EN,English,EN-US,none
 
 # Subtitle language (string)
-sub-language=English
+sub-language=EN,English,EN-US,none
 
 # Menu language (string)
-menu-language=English
+menu-language=EN,English,EN-US,none
 
 # Audio track ID (integer)
 #audio-track-id=-1
@@ -4482,7 +4485,7 @@ menu-language=English
 #sap-interval=5
 
 # Mux module (string)
-#mux=
+mux=any
 
 # Access output module (string)
 #access_output=
@@ -4512,7 +4515,7 @@ vod-server=any
 #keystore=
 
 # Increase the priority of the process (boolean)
-#high-priority=0
+high-priority=1
 
 # Clock source (string)
 #clock-source=
@@ -4599,7 +4602,7 @@ stats=0
 #extraintf=
 
 # Control interfaces (string)
-#control=
+control=win_msg:ntservice:gestures
 
 # Mouse wheel vertical axis control (integer)
 #hotkeys-y-wheel-mode=0
@@ -5130,7 +5133,7 @@ stats=0
 #key-zoom-double=Alt+4
 
 # Very short jump length (integer)
-extrashort-jump-size=5
+#extrashort-jump-size=3
 
 # Short jump length (integer)
 short-jump-size=5
