@@ -29,10 +29,6 @@ for /f "tokens=*" %%a in ('dir /a:-d /b ^| findstr /r ".reg$"') do (
 	reg import %%a >NUL 2>&1
 )
 
-echo Restarting Everything
-"%ProgramFiles%\Everything\Everything.exe" -install-service >NUL 2>&1
-
-
 echo.
 echo.
 echo DONE.
