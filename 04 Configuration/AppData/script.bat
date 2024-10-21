@@ -11,10 +11,18 @@ if %ErrorLevel% NEQ 0 (
     exit /b 1
 )
 
-echo Killing running services:
 setlocal enabledelayedexpansion
 
 set services=Code Everything Logi Flow flux qBittorrent vlc Spotify GoogleDriveFS crashpad_handler chrome Foxit Office
+
+echo.
+echo The script kills the following programs, save any progress:
+echo.
+echo %services%
+echo.
+pause
+
+echo Killing running services:
 
 for %%a in (%services%) do (
     echo    %%a
@@ -24,8 +32,8 @@ for %%a in (%services%) do (
 endlocal
 
 echo.
-echo Copying AppData and LocalAppData folders
-robocopy . "%AppData%" /E /B /IS /IT /copyall /XF script.bar >NUL 2>&1
+echo Copying AppData folders
+robocopy . "%AppData%" /E /B /IS /IT /copyall /XF script.bat >NUL 2>&1
 
 echo Restarting Everything
 "%ProgramFiles%\Everything\Everything.exe" -install-service >NUL 2>&1
