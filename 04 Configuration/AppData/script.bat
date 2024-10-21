@@ -25,7 +25,7 @@ endlocal
 
 echo.
 echo Copying AppData and LocalAppData folders
-robocopy . "%AppData%" /E /B /IS /copyall /XF script.bar >NUL 2>&1
+robocopy . "%AppData%" /E /B /IS /IT /copyall /XF script.bar >NUL 2>&1
 
 echo Restarting Everything
 "%ProgramFiles%\Everything\Everything.exe" -install-service >NUL 2>&1
