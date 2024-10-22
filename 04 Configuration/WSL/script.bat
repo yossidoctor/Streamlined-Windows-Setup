@@ -12,6 +12,8 @@ if %ErrorLevel% NEQ 0 (
 )
 
 wsl git clone https://github.com/yossidoctor/linux-setup.git ~/linux-setup
-wsl rsync -av --exclude='.git' --exclude='README.MD' linux-setup/ ./
-wsl sh setup.sh
+wsl rsync -avq --exclude='.git' --exclude='README.MD' ~/linux-setup/ ~/
+wsl ~/setup.sh
+wsl rm -rf ~/setup.sh ~/linux-setup
+
 pause

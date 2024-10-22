@@ -11,22 +11,29 @@ if %ErrorLevel% NEQ 0 (
     exit /b 1
 )
 
-echo Deleting current policies
-RD /S /Q "%WinDir%\System32\GroupPolicy" >NUL 2>&1
-RD /S /Q "%WinDir%\System32\GroupPolicyUsers" >NUL 2>&1
+set "GroupPolicyDir=%WinDir%\System32\GroupPolicy"
+set "GroupPolicyUsersDir=%WinDir%\System32\GroupPolicyUsers"
 
-echo Importing policiy definitions
-robocopy "PolicyDefinitions" "%WinDir%\PolicyDefinitions" /E /B /IS /IT /copyall >NUL 2>&1
+echo Deleting current policies from:
+echo    %GroupPolicyDir%
+echo    %GroupPolicyUsersDir%
 
-echo Setting machine and user group policies
+RD /S /Q "%GroupPolicyDir%" >NUL 2>&1
+RD /S /Q "%GroupPolicyUsersDir%" >NUL 2>&1
+
+echo.
+echo Extracting policy definitions to %WinDir%\PolicyDefinitions
+tar -xvf "PolicyDefinitions24H2.zip" -C %WinDir%
+
+echo Setting machine and user group policies using LGPO utility
 lgpo.exe /m machine_registry.pol /q
 lgpo.exe /u user_registry.pol /q
 
-:: Force a Group Policy update, applying any new or changed policies
+echo Updating group policy
 gpupdate /force
+
 
 echo.
 echo.
 echo DONE.
 pause
-exit

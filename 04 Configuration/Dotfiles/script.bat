@@ -11,6 +11,8 @@ if %ErrorLevel% NEQ 0 (
     exit /b 1
 )
 
+echo.
+echo Copying dotfiles
 copy .\.* "%UserProfile%" >NUL 2>&1
 
 
@@ -18,4 +20,3 @@ echo.
 echo.
 echo DONE.
 pause
-

@@ -16,6 +16,10 @@
             "keys": "ctrl+v"
         },
         {
+            "command": "find",
+            "keys": "ctrl+f"
+        },
+        {
             "command":
             {
                 "action": "splitPane",
@@ -23,15 +27,10 @@
                 "splitMode": "duplicate"
             },
             "keys": "alt+shift+d"
-        },
-        {
-            "command": "find",
-            "keys": "ctrl+shift+f"
         }
     ],
-    "copyFormatting": "none",
-    "copyOnSelect": false,
     "defaultProfile": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+    "experimental.rendering.software": false,
     "newTabMenu":
     [
         {
@@ -42,6 +41,7 @@
     {
         "defaults":
         {
+            "colorScheme": "One Half Dark",
             "font":
             {
                 "face": "JetBrainsMono Nerd Font"
@@ -56,16 +56,30 @@
                 "name": "Command Prompt"
             },
             {
+                "commandline": "wsl",
                 "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
                 "hidden": false,
-                "name": "Ubuntu (ZSH)",
-                "commandline": "wsl -e zsh"
+                "name": "WSL Ubuntu",
+                "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc",
+                "tabTitle": null
             },
             {
                 "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
                 "name": "Windows PowerShell"
+            },
+            {
+                "commandline": "python",
+                "guid": "{5dce8ed7-1d90-4eb7-a2f6-45a6e19c3cb5}",
+                "hidden": false,
+                "name": "Python"
+            },
+            {
+                "commandline": "ipython",
+                "guid": "{0d8af0cc-8f64-4ae3-a6e0-d8b29587b3e5}",
+                "hidden": false,
+                "name": "IPython"
             }
         ]
     },
@@ -302,6 +316,6 @@
             "yellow": "#808000"
         }
     ],
-    "theme": "system",
-    "themes": []
+    "themes": [],
+    "useAcrylicInTabRow": false
 }

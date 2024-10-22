@@ -1,19 +1,24 @@
 @echo off
 
-:: Changes the working directory to the script directory
-pushd %~dp0
+set "Installer=flux-setup.exe"
+set "DownloadDir=%USERPROFILE%\Desktop"
+set "InstallerPath=%DownloadDir%\%Installer%"
+set "URL=https://justgetflux.com/dlwin.html"
 
-:: Check if the script is running with administrative privileges
-net session >NUL 2>&1
-if %ErrorLevel% NEQ 0 (
-    echo Permission denied. This script must be run as an Administrator.
-    pause
-    exit /b 1
-)
+echo.
+echo Downloading %Installer% to %DownloadDir%
+curl -L -o %InstallerPath% %URL% >NUL 2>&1
 
-set "desktop=%USERPROFILE%\Desktop"
-curl -L -o "%desktop%\flux_installer.exe" https://justgetflux.com/dlwin.html
-echo Download completed!
-start /wait "%desktop%\lux_installer.exe"
-echo Installation completed!
+echo.
+echo Running %Installer%
+cmd /c %InstallerPath% >NUL 2>&1
+
+echo.
+echo Finished running %Installer%, deleting installer
+del /f /q %InstallerPath% >NUL 2>&1
+
+
+echo.
+echo.
+echo DONE.
 pause

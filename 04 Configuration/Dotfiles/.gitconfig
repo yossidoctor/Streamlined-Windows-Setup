@@ -1,3 +1,9 @@
 [user]
 	name = Yossi Doctor
 	email = yossidoctor98@gmail.com
+[safe]
+	directory = D:/Streamlined-Windows-Setup
+[apply]
+	whitespace = nowarn
+[core]
+	autocrlf = true

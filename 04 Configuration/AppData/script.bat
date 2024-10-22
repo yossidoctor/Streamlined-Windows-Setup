@@ -13,12 +13,13 @@ if %ErrorLevel% NEQ 0 (
 
 setlocal enabledelayedexpansion
 
-set services=Code Everything Logi Flow flux qBittorrent vlc Spotify GoogleDriveFS crashpad_handler chrome Foxit Office
+set services=Code Everything Logi Flow flux qBittorrent vlc Spotify GoogleDriveFS Foxit Office
 
 echo.
 echo The script kills the following programs, save any progress:
-echo.
-echo %services%
+for %%s in (%services%) do (
+    echo    %%s
+)
 echo.
 pause
 
@@ -35,11 +36,8 @@ echo.
 echo Copying AppData folders
 robocopy . "%AppData%" /E /B /IS /IT /copyall /XF script.bat >NUL 2>&1
 
-echo Restarting Everything
-"%ProgramFiles%\Everything\Everything.exe" -install-service >NUL 2>&1
 
 echo.
 echo.
 echo DONE.
 pause
-
