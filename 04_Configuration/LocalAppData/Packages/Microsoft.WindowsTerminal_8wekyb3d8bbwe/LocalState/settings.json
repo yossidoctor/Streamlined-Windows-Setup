@@ -1,0 +1,98 @@
+{
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "actions": [
+        {
+            "command": {
+                "action": "showSuggestions",
+                "source": "all",
+                "useCommandline": true
+            },
+            "id": "User.showSuggestions.4A407798"
+        },
+        {
+            "command": "closePane",
+            "id": "User.closePane",
+            "keys": "ctrl+w"
+        },
+        {
+            "command": {
+                "action": "copy"
+            },
+            "id": "User.copy",
+            "keys": "ctrl+c"
+        },
+        {
+            "command": "paste",
+            "id": "User.paste",
+            "keys": "ctrl+v"
+        }
+    ],
+    "alwaysShowNotificationIcon": true,
+    "defaultProfile": "{01234567-89ab-cdef-0123-456789abcdef}",
+    "disabledProfileSources": [
+        "Windows.Terminal.Azure"
+    ],
+    "language": "en-US",
+    "minimizeToNotificationArea": false,
+    "newTabMenu": [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
+    "profiles": {
+        "defaults": {
+            "antialiasingMode": "cleartype",
+            "colorScheme": "One Half Dark",
+            "experimental.rightClickContextMenu": true,
+            "font": {
+                "face": "JetBrainsMono Nerd Font"
+            }
+        },
+        "list": [
+            {
+                "commandline": "%SystemRoot%\\System32\\cmd.exe",
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "hidden": false,
+                "name": "CMD"
+            },
+            {
+                "commandline": "ubuntu",
+                "guid": "{a1d44814-d1b0-44ec-8d64-c088ced8f5bb}",
+                "hidden": false,
+                "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
+                "name": "Ubuntu",
+                "startingDirectory": "~"
+            },
+            {
+                "commandline": "%ProgramFiles%\\Git\\bin\\bash.exe -li",
+                "guid": "{01234567-89ab-cdef-0123-456789abcdef}",
+                "hidden": false,
+                "icon": "%ProgramFiles%\\Git\\mingw64\\share\\git\\git-for-windows.ico",
+                "name": "Git Bash",
+                "startingDirectory": "%UserProfile%"
+            },
+            {
+                "guid": "{5dce8ed7-1d90-4eb7-a2f6-45a6e19c3cb5}",
+                "hidden": false,
+                "icon": "C:\\Program Files\\Python313\\DLLs\\pyc.ico",
+                "name": "Python"
+            },
+            {
+                "commandline": "ipython",
+                "guid": "{0d8af0cc-8f64-4ae3-a6e0-d8b29587b3e5}",
+                "hidden": false,
+                "icon": "C:\\Program Files\\Python313\\DLLs\\pyc.ico",
+                "name": "iPython"
+            },
+            {
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "hidden": false,
+                "name": "PowerShell"
+            }
+        ]
+    },
+    "schemes": [],
+    "tabWidthMode": "titleLength",
+    "themes": []
+}

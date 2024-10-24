@@ -1,0 +1,1 @@
+WSReset -i&&TimeOut 20&&WSReset -i&&exit

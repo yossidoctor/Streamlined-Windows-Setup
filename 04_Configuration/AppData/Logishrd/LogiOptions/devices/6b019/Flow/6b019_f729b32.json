@@ -1,0 +1,117 @@
+{
+   "created" : 1676106106,
+   "current_host" : 1,
+   "device_id" : 438297,
+   "fw_version" : "",
+   "global_settings" : {
+      "clipboard_sync" : 1,
+      "ctrl_key_enabled" : 0,
+      "email" : "",
+      "enabled" : 0,
+      "global_revision" : 0,
+      "hot_corner_enabled" : 0,
+      "linked_keyboard_device_id" : 0,
+      "linked_keyboard_unit_id" : 0
+   },
+   "hostsinfos" : [
+      {
+         "bottom_edge_threshold" : 5,
+         "bridges" : [],
+         "bus_type" : "",
+         "configured" : false,
+         "desktop_workarea_height" : 1080,
+         "desktop_workarea_width" : 1240,
+         "disable_flow_multiple_monitor" : 0,
+         "host_id" : "",
+         "host_index" : 0,
+         "host_name" : "",
+         "keyboards_device_info" : [],
+         "left_edge_threshold" : 5,
+         "monitors" : [
+            {
+               "height" : 0,
+               "width" : 0,
+               "work_offset_x" : 0,
+               "work_offset_y" : 0
+            }
+         ],
+         "os_major_version" : "0",
+         "os_minor_version" : "0",
+         "os_patch_version" : "0",
+         "os_type" : "",
+         "revision" : 0,
+         "right_edge_threshold" : 5,
+         "status" : 0,
+         "top_edge_threshold" : 5,
+         "topleft_coordinate_x" : 0,
+         "topleft_coordinate_y" : 0
+      },
+      {
+         "bottom_edge_threshold" : 5,
+         "bridges" : [],
+         "bus_type" : "Bluetooth",
+         "configured" : true,
+         "desktop_workarea_height" : 1080,
+         "desktop_workarea_width" : 1240,
+         "disable_flow_multiple_monitor" : 0,
+         "host_id" : "60385052-67C9-43DF-905C-D29A974867F2_YOSSI-PC",
+         "host_index" : 1,
+         "host_name" : "Yossi-PC",
+         "keyboards_device_info" : [],
+         "left_edge_threshold" : 5,
+         "monitors" : [
+            {
+               "height" : 720,
+               "width" : 1280,
+               "work_offset_x" : 1280,
+               "work_offset_y" : 720
+            }
+         ],
+         "os_major_version" : "10",
+         "os_minor_version" : "0",
+         "os_patch_version" : "0",
+         "os_type" : "Windows",
+         "revision" : 1,
+         "right_edge_threshold" : 5,
+         "status" : 1,
+         "top_edge_threshold" : 5,
+         "topleft_coordinate_x" : 0,
+         "topleft_coordinate_y" : 0
+      },
+      {
+         "bottom_edge_threshold" : 5,
+         "bridges" : [],
+         "bus_type" : "",
+         "configured" : false,
+         "desktop_workarea_height" : 1080,
+         "desktop_workarea_width" : 1240,
+         "disable_flow_multiple_monitor" : 0,
+         "host_id" : "",
+         "host_index" : 2,
+         "host_name" : "",
+         "keyboards_device_info" : [],
+         "left_edge_threshold" : 5,
+         "monitors" : [
+            {
+               "height" : 0,
+               "width" : 0,
+               "work_offset_x" : 0,
+               "work_offset_y" : 0
+            }
+         ],
+         "os_major_version" : "0",
+         "os_minor_version" : "0",
+         "os_patch_version" : "0",
+         "os_type" : "",
+         "revision" : 0,
+         "right_edge_threshold" : 5,
+         "status" : 0,
+         "top_edge_threshold" : 5,
+         "topleft_coordinate_x" : 0,
+         "topleft_coordinate_y" : 0
+      }
+   ],
+   "unit_id" : 259169074,
+   "updated" : 1676106106,
+   "version" : "1.0"
+}
