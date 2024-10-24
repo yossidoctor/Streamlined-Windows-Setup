@@ -1,0 +1,8 @@
+[user]
+	name = Yossi Doctor
+	email = yossidoctor98@gmail.com
+[push]
+	autoSetupRemote = true
+
+[alias]
+	hist = log --all --decorate --oneline --graph

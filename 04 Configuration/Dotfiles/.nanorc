@@ -1,0 +1,8 @@
+set tabsize 4
+set linenumbers
+set autoindent
+set softwrap
+set constantshow
+set mouse
+set saveonexit
+set historylog
