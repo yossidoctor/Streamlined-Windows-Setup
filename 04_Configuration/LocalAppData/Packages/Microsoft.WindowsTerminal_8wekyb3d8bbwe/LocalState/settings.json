@@ -29,7 +29,7 @@
         }
     ],
     "alwaysShowNotificationIcon": true,
-    "defaultProfile": "{01234567-89ab-cdef-0123-456789abcdef}",
+    "defaultProfile": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
     "disabledProfileSources": [
         "Windows.Terminal.Azure"
     ],
@@ -65,14 +65,6 @@
                 "startingDirectory": "~"
             },
             {
-                "commandline": "%ProgramFiles%\\Git\\bin\\bash.exe -li",
-                "guid": "{01234567-89ab-cdef-0123-456789abcdef}",
-                "hidden": false,
-                "icon": "%ProgramFiles%\\Git\\mingw64\\share\\git\\git-for-windows.ico",
-                "name": "Git Bash",
-                "startingDirectory": "%UserProfile%"
-            },
-            {
                 "guid": "{5dce8ed7-1d90-4eb7-a2f6-45a6e19c3cb5}",
                 "hidden": false,
                 "icon": "C:\\Program Files\\Python313\\DLLs\\pyc.ico",
@@ -89,6 +81,14 @@
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
                 "name": "PowerShell"
+            },
+            {
+                "commandline": "%ProgramFiles%\\Git\\bin\\bash.exe -li",
+                "guid": "{01234567-89ab-cdef-0123-456789abcdef}",
+                "hidden": false,
+                "icon": "%ProgramFiles%\\Git\\mingw64\\share\\git\\git-for-windows.ico",
+                "name": "Git Bash",
+                "startingDirectory": "%UserProfile%"
             }
         ]
     },
